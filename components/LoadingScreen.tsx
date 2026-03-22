@@ -64,7 +64,7 @@ export default function LoadingScreen({
                 className="font-serif italic text-2xl tracking-tight mb-10"
                 style={{ color: "#1E2B45" }}
               >
-                The Academic Atelier
+                Vergre
               </h1>
 
               <div

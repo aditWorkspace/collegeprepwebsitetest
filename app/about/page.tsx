@@ -1,129 +1,110 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
-import { consultants } from "@/data/content";
+import InteractiveImage from "@/components/InteractiveImage";
+import { counselors } from "@/data/content";
 
 export const metadata: Metadata = {
-  title: "About | The Academic Atelier",
-  description: "Meet the mentors behind The Academic Atelier.",
+  title: "About | Vergre Consulting",
+  description: "Meet the founders behind Vergre Consulting.",
 };
 
 export default function AboutPage() {
   return (
-    <div className="pt-[60px]">
+    <div className="pt-[64px]">
       {/* Header */}
-      <section className="py-20 lg:py-28">
+      <section className="py-20 lg:py-28 dot-grid-light">
         <div className="max-w-3xl mx-auto px-6 lg:px-8">
           <ScrollReveal>
-            <p className="text-[11px] font-semibold tracking-[0.2em] uppercase text-muted mb-5">
-              About
+            <p className="text-[12px] font-semibold tracking-[0.25em] uppercase text-accent-warm mb-5">
+              /about
             </p>
-            <h1 className="font-serif text-4xl lg:text-5xl text-foreground leading-[1.12] tracking-tight mb-6">
-              The people behind <em className="text-accent">the work.</em>
+            <h1 className="font-serif text-[clamp(2.5rem,5vw,4rem)] text-foreground leading-[1.08] tracking-tight mb-6">
+              The people behind <em className="text-accent">Vergre.</em>
             </h1>
-            <p className="text-[15px] text-muted leading-relaxed max-w-lg">
-              We&apos;re not a faceless agency. We&apos;re two people who care
-              deeply about helping students tell their real stories — because
-              we&apos;ve been through the process ourselves.
+            <p className="text-[17px] text-muted leading-[1.7] max-w-lg">
+              We&apos;re not a faceless agency. We&apos;re two people who went
+              through this process ourselves and built something better.
             </p>
           </ScrollReveal>
         </div>
       </section>
 
       {/* Founders */}
-      <section className="pb-24 lg:pb-32">
-        <div className="max-w-6xl mx-auto px-6 lg:px-8 space-y-8">
-          {consultants.map((c, i) => (
+      <section className="pb-20 lg:pb-24">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8 space-y-10">
+          {counselors.map((c, i) => (
             <ScrollReveal key={c.id} delay={i * 0.1}>
-              <div className="bg-card border border-border rounded-2xl overflow-hidden">
-                <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-0">
+              <InteractiveImage
+                className="bg-card border border-border rounded-3xl overflow-hidden cursor-pointer"
+                intensity={2}
+                scale={1.008}
+              >
+                <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-0">
                   {/* Photo column */}
-                  <div className="bg-warm flex items-center justify-center p-10 lg:p-0 lg:min-h-[360px]">
-                    {c.image ? (
-                      // REPLACE: Use next/image when you have real photos
-                      // eslint-disable-next-line @next/next/no-img-element
-                      <img
-                        src={c.image}
-                        alt={c.name}
-                        className="w-full h-full object-cover"
-                      />
-                    ) : (
-                      <div className="flex flex-col items-center gap-2 opacity-30">
-                        <span className="material-symbols-outlined text-[48px] text-muted">
-                          person
-                        </span>
-                        <p className="text-[11px] text-muted">
-                          Add photo
-                        </p>
-                      </div>
-                    )}
+                  <div className="min-h-[240px] lg:min-h-[400px] relative overflow-hidden"
+                    style={{
+                      background: i === 0
+                        ? "linear-gradient(135deg, #2C3E50 0%, #34495E 50%, #2C3E50 100%)"
+                        : "linear-gradient(135deg, #5B2C6F 0%, #7D3C98 50%, #5B2C6F 100%)",
+                    }}
+                  >
+                    <div className="absolute inset-0 dot-grid-light opacity-15" />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <span className="text-white/20 font-serif text-[80px] font-bold">
+                        {c.name.split(" ").map((n) => n[0]).join("")}
+                      </span>
+                    </div>
                   </div>
 
-                  {/* Content column */}
+                  {/* Content */}
                   <div className="p-8 lg:p-10">
-                    <div className="mb-6">
-                      <h2 className="font-serif text-2xl text-foreground mb-1">
-                        {c.name}
-                      </h2>
-                      <p className="text-[14px] text-muted">{c.title}</p>
-                      <p className="text-[12px] text-muted mt-1">
-                        {c.degree}, {c.school}
+                    <div className="mb-7">
+                      <div className="flex items-center gap-4 mb-1">
+                        <h2 className="font-serif text-[clamp(1.5rem,3vw,2rem)] text-foreground">
+                          {c.name}
+                        </h2>
+                        <a
+                          href={c.linkedin}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-8 h-8 rounded-lg bg-accent-light flex items-center justify-center hover:bg-accent hover:text-white text-accent transition-all duration-200 shrink-0"
+                          aria-label={`${c.name}'s LinkedIn`}
+                        >
+                          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                          </svg>
+                        </a>
+                      </div>
+                      <p className="text-[15px] text-muted">{c.title}</p>
+                      <p className="text-[13px] text-accent-warm mt-1 font-semibold">
+                        {c.school} · SAT {c.sat}
                       </p>
                     </div>
 
-                    {/* Specialties */}
-                    <div className="flex flex-wrap gap-1.5 mb-6">
-                      {c.specialties.map((s) => (
-                        <span
-                          key={s}
-                          className="text-[11px] font-medium px-2.5 py-1 rounded-md bg-accent-light text-accent"
-                        >
-                          {s}
+                    <div className="flex flex-wrap gap-2 mb-7">
+                      {c.activities.map((a) => (
+                        <span key={a} className="text-[11px] font-bold px-3 py-1.5 rounded-lg bg-accent-light text-accent">
+                          {a}
                         </span>
                       ))}
                     </div>
 
-                    {/* Stats grid */}
-                    <div className="grid grid-cols-2 gap-4 mb-6 py-5 border-y border-border">
+                    <div className="grid grid-cols-1 gap-5 mb-7 py-6 border-y border-border">
                       <div>
-                        <p className="text-[11px] uppercase tracking-[0.1em] text-muted mb-1">
-                          Test Scores
-                        </p>
-                        <p className="text-[13px] font-medium text-foreground">
-                          {c.sat}
-                        </p>
-                      </div>
-                      <div>
-                        <p className="text-[11px] uppercase tracking-[0.1em] text-muted mb-1">
+                        <p className="text-[11px] uppercase tracking-[0.15em] text-muted mb-1.5 font-semibold">
                           Admitted To
                         </p>
-                        <p className="text-[13px] font-medium text-foreground">
+                        <p className="text-[15px] font-semibold text-foreground">
                           {c.admittedTo.join(", ")}
                         </p>
                       </div>
                     </div>
 
-                    {/* Bio */}
-                    <p className="text-[14px] text-muted leading-relaxed mb-5 italic">
-                      {c.bio}
-                    </p>
-
-                    {/* Highlights */}
-                    <ul className="space-y-2">
-                      {c.highlights.map((h, j) => (
-                        <li key={j} className="flex items-start gap-2.5">
-                          <span className="material-symbols-outlined text-[14px] text-accent mt-0.5 shrink-0">
-                            arrow_forward
-                          </span>
-                          <span className="text-[13px] text-muted">
-                            {h}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
+                    <p className="text-[15px] text-muted leading-[1.7]">{c.bio}</p>
                   </div>
                 </div>
-              </div>
+              </InteractiveImage>
             </ScrollReveal>
           ))}
         </div>
@@ -131,17 +112,35 @@ export default function AboutPage() {
 
       {/* CTA */}
       <section className="pb-24 lg:pb-32">
-        <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <ScrollReveal>
-            <p className="text-[15px] text-muted mb-6">
-              Want to get to know us better?
-            </p>
-            <Link
-              href="/book"
-              className="bg-accent text-white text-[13px] font-medium px-7 py-3 rounded-lg hover:bg-accent-hover hover:-translate-y-[1px] transition-all duration-200"
-            >
-              Book an Intro Call
-            </Link>
+            <div className="bg-accent rounded-3xl px-8 py-14 lg:px-16 lg:py-16 text-center relative overflow-hidden">
+              <div className="absolute inset-0 dot-grid-light opacity-10" />
+              <div className="absolute -top-12 -right-12 w-40 h-40 rounded-full bg-white/[0.03]" />
+              <div className="relative z-10">
+                <h2 className="font-serif text-[clamp(1.8rem,3.5vw,2.5rem)] text-white mb-4">
+                  Want to get to know us better?
+                </h2>
+                <p className="text-[16px] text-white/45 mb-8 max-w-md mx-auto leading-relaxed">
+                  The best way is a free intro call. 20 minutes, no commitment, and you&apos;ll know exactly what working with us looks like.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                  <Link
+                    href="/book"
+                    className="bg-white text-accent text-[15px] font-semibold px-9 py-4 rounded-xl hover:-translate-y-[2px] hover:shadow-xl transition-all duration-300 interactive-lift"
+                    style={{ opacity: 1 }}
+                  >
+                    Book an Intro Call
+                  </Link>
+                  <Link
+                    href="/testimonials"
+                    className="border-2 border-white/20 text-white text-[15px] font-semibold px-9 py-4 rounded-xl hover:bg-white/10 hover:border-white/30 transition-all duration-300"
+                  >
+                    Read Testimonials
+                  </Link>
+                </div>
+              </div>
+            </div>
           </ScrollReveal>
         </div>
       </section>

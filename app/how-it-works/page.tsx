@@ -1,165 +1,138 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
+import InteractiveImage from "@/components/InteractiveImage";
 
 export const metadata: Metadata = {
-  title: "How It Works | The Academic Atelier",
-  description: "Our three-phase consulting process and the dual-mentor model.",
+  title: "How It Works | Vergre Consulting",
+  description: "Our three-step process: Understand, Build, Refine.",
 };
 
 const phases = [
   {
     num: "01",
-    title: "Discovery & Identity",
-    description:
-      "We start by getting to know you — not your resume. Through a deep intake process, we map your experiences, values, intellectual interests, and the parts of your story that feel most alive. This shapes everything else.",
-    details: [
-      "90-minute deep-dive intake session",
-      "Values and interests mapping",
-      "Academic narrative assessment",
-      "Initial positioning strategy",
-    ],
+    title: "Understand",
+    icon: "psychology",
+    description: "We start by getting to know you — your interests, your strengths, what you actually care about. Not your resume, not your stats. We figure out what makes you interesting and where the real story is.",
+    details: ["Deep-dive conversation about who you are", "Interests and strengths mapping", "Identify what's missing from your profile", "Initial strategy for what to build"],
+    imageLabel: "Discovery session",
   },
   {
     num: "02",
-    title: "Strategic Architecture",
-    description:
-      "With a clear picture of who you are, we build a strategic framework for your applications. School list, narrative threads, which activities to foreground, which essays to write and why.",
-    details: [
-      "School list research and curation",
-      "Narrative thread identification",
-      "Activities and honors positioning",
-      "Essay topic strategy per school",
-    ],
+    title: "Build",
+    icon: "rocket_launch",
+    description: "This is what makes us different. We don't just advise — we help you actually create projects, initiatives, and experiences that strengthen your profile. Things that are genuinely yours, not manufactured for an application.",
+    details: ["Project ideation and development", "Initiative launch support", "Experience building guidance", "Activities list development"],
+    imageLabel: "Project development",
   },
   {
     num: "03",
-    title: "Refining & Execution",
-    description:
-      "We work through drafts together — real feedback, real conversation. We push you to go deeper, cut what's vague, and sharpen what's true. Both consultants review your work before it goes anywhere.",
-    details: [
-      "Iterative draft development",
-      "Line-level editing and feedback",
-      "Dual-mentor review on every essay",
-      "Final polish and submission prep",
-    ],
+    title: "Refine",
+    icon: "edit_note",
+    description: "Once your profile is real, we shape how you present it. Essays, activities list, narrative — everything gets refined until your application tells a coherent, authentic story. Both founders review everything before submission.",
+    details: ["Essay writing and revision", "Narrative arc development", "Activities and honors positioning", "Final review by both founders"],
+    imageLabel: "Essay review",
   },
 ];
 
 export default function HowItWorksPage() {
   return (
-    <div className="pt-[60px]">
-      {/* Header */}
-      <section className="py-20 lg:py-28">
+    <div className="pt-[64px]">
+      <section className="py-20 lg:py-28 dot-grid-light">
         <div className="max-w-3xl mx-auto px-6 lg:px-8">
           <ScrollReveal>
-            <p className="text-[11px] font-semibold tracking-[0.2em] uppercase text-muted mb-5">
-              How It Works
-            </p>
-            <h1 className="font-serif text-4xl lg:text-5xl text-foreground leading-[1.12] tracking-tight mb-6">
-              A process built around <em className="text-accent">you.</em>
+            <p className="text-[12px] font-semibold tracking-[0.25em] uppercase text-accent-warm mb-5">/process</p>
+            <h1 className="font-serif text-[clamp(2.5rem,5vw,4rem)] text-foreground leading-[1.08] tracking-tight mb-6">
+              Understand. Build. <em className="text-accent">Refine.</em>
             </h1>
-            <p className="text-[15px] text-muted leading-relaxed max-w-lg">
-              We&apos;re intentionally small. Every student gets a dedicated
-              primary mentor, plus direct access to the second — who reviews
-              everything before submission.
+            <p className="text-[17px] text-muted leading-[1.7] max-w-lg">
+              We don&apos;t just help you write about your experiences — we help
+              you create them. Then we make sure your application tells the
+              full story.
             </p>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* Phases */}
       <section className="pb-20 lg:pb-28">
-        <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="space-y-6">
-            {phases.map((phase, i) => (
-              <ScrollReveal key={phase.num} delay={i * 0.1}>
-                <div className="bg-card border border-border rounded-2xl p-8 lg:p-10 group hover:border-accent/30 transition-colors duration-300">
-                  <div className="grid grid-cols-1 lg:grid-cols-[80px_1fr_1fr] gap-6 lg:gap-10 items-start">
-                    {/* Number */}
-                    <span className="font-serif text-5xl text-border group-hover:text-accent/20 transition-colors duration-300 leading-none">
-                      {phase.num}
-                    </span>
-
-                    {/* Main content */}
-                    <div>
-                      <h2 className="text-[18px] font-semibold text-foreground mb-3">
-                        {phase.title}
-                      </h2>
-                      <p className="text-[14px] text-muted leading-relaxed">
-                        {phase.description}
-                      </p>
+        <div className="max-w-6xl mx-auto px-6 lg:px-8 space-y-8">
+          {phases.map((phase, i) => (
+            <ScrollReveal key={phase.num} delay={i * 0.1}>
+              <InteractiveImage className="bg-card border border-border rounded-2xl overflow-hidden cursor-pointer" intensity={2} scale={1.008}>
+                <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-0">
+                  <div className="p-8 lg:p-10">
+                    <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr_1fr] gap-6 lg:gap-8 items-start">
+                      <div className="flex items-center gap-3">
+                        <span className="font-serif text-[clamp(2.5rem,5vw,3.5rem)] text-accent/15 leading-none font-bold">{phase.num}</span>
+                        <span className="material-symbols-outlined text-[24px] text-accent">{phase.icon}</span>
+                      </div>
+                      <div>
+                        <h2 className="text-[20px] font-bold text-foreground mb-3">{phase.title}</h2>
+                        <p className="text-[15px] text-muted leading-[1.7]">{phase.description}</p>
+                      </div>
+                      <div className="lg:border-l lg:border-border lg:pl-8">
+                        <p className="text-[11px] uppercase tracking-[0.15em] text-muted mb-4 font-bold">What this looks like</p>
+                        <ul className="space-y-2.5">
+                          {phase.details.map((d) => (
+                            <li key={d} className="flex items-start gap-2.5">
+                              <span className="material-symbols-outlined text-[16px] text-accent mt-0.5 shrink-0">check</span>
+                              <span className="text-[14px] text-muted">{d}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     </div>
-
-                    {/* Details */}
-                    <div className="lg:border-l lg:border-border lg:pl-8">
-                      <p className="text-[11px] uppercase tracking-[0.1em] text-muted mb-3">
-                        What&apos;s included
-                      </p>
-                      <ul className="space-y-2">
-                        {phase.details.map((detail) => (
-                          <li
-                            key={detail}
-                            className="flex items-start gap-2"
-                          >
-                            <span className="material-symbols-outlined text-[14px] text-accent mt-0.5 shrink-0">
-                              check
-                            </span>
-                            <span className="text-[13px] text-muted">
-                              {detail}
-                            </span>
-                          </li>
-                        ))}
-                      </ul>
+                  </div>
+                  {/* Image placeholder — replace with real photos */}
+                  <div
+                    className="hidden lg:block min-h-[260px] relative"
+                    style={{
+                      background: `linear-gradient(${135 + i * 40}deg, ${
+                        ["#2C3E50, #4A6741", "#1A2340, #2C3A5C", "#5B2C6F, #9B59B6"][i]
+                      })`,
+                    }}
+                  >
+                    <div className="absolute inset-0 dot-grid-light opacity-15" />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="text-center">
+                        <span className="material-symbols-outlined text-white/20 text-[36px] block mb-2">{phase.icon}</span>
+                        <p className="text-white/25 text-[12px] font-medium tracking-wide">{phase.imageLabel}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </ScrollReveal>
-            ))}
-          </div>
+              </InteractiveImage>
+            </ScrollReveal>
+          ))}
         </div>
       </section>
 
-      {/* Dual Mentor */}
+      {/* Both founders */}
       <section className="py-20 lg:py-28 bg-card border-y border-border">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <ScrollReveal>
-            <div className="bg-accent rounded-2xl p-8 lg:p-12">
-              <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr] gap-6 items-start">
-                <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0">
-                  <span className="material-symbols-outlined text-[24px] text-white">
-                    group
-                  </span>
+            <div className="bg-accent rounded-3xl p-8 lg:p-12 relative overflow-hidden">
+              <div className="absolute inset-0 dot-grid-light opacity-8" />
+              <div className="absolute -top-16 -right-16 w-48 h-48 rounded-full bg-white/[0.03]" />
+              <div className="relative z-10 grid grid-cols-1 lg:grid-cols-[auto_1fr] gap-6 items-start">
+                <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center flex-shrink-0">
+                  <span className="material-symbols-outlined text-[28px] text-white">group</span>
                 </div>
                 <div>
-                  <h2 className="font-serif text-2xl text-white mb-3">
-                    The Dual-Mentor Model
-                  </h2>
-                  <div className="space-y-4 text-[14px] text-white/70 leading-relaxed">
-                    <p>
-                      Each student has a{" "}
-                      <strong className="text-white font-medium">
-                        primary mentor
-                      </strong>{" "}
-                      who leads their strategy and is their main point of
-                      contact throughout the process.
-                    </p>
-                    <p>
-                      The{" "}
-                      <strong className="text-white font-medium">
-                        second mentor
-                      </strong>{" "}
-                      stays genuinely in the loop — available for additional
-                      sessions if you want another perspective, and{" "}
-                      <strong className="text-white font-medium">
-                        guaranteed to review every essay before submission
-                      </strong>
-                      .
-                    </p>
-                    <p>
-                      Two sets of sharp, experienced eyes on everything you
-                      submit. No outsourcing. No interns. No junior staff.
-                    </p>
+                  <h2 className="font-serif text-[clamp(1.5rem,3vw,2rem)] text-white mb-4">You work with both of us.</h2>
+                  <div className="space-y-4 text-[15px] text-white/60 leading-[1.7]">
+                    <p>Every student works directly with <strong className="text-white font-semibold">Adit and Aum</strong> — not interns, not junior staff, not someone we hired last month.</p>
+                    <p>Both of us stay involved throughout the entire process. Both of us <strong className="text-white font-semibold">review every essay before submission</strong>. Two perspectives, two sets of experience, one shared goal.</p>
+                  </div>
+                  <div className="flex items-center gap-4 mt-6 pt-5 border-t border-white/10">
+                    <div className="flex -space-x-2">
+                      {["AM", "AN"].map((initials, idx) => (
+                        <div key={idx} className="w-9 h-9 rounded-full border-2 border-accent bg-white/15 text-white flex items-center justify-center text-[10px] font-semibold">
+                          {initials}
+                        </div>
+                      ))}
+                    </div>
+                    <p className="text-[13px] text-white/40">Adit Mittal & Aum Narkar</p>
                   </div>
                 </div>
               </div>
@@ -168,44 +141,31 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
-      {/* Key facts */}
+      {/* Good to know — enhanced */}
       <section className="py-20 lg:py-28">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <ScrollReveal>
-            <h2 className="font-serif text-2xl text-foreground mb-10 text-center">
-              Good to know.
-            </h2>
+            <p className="text-[12px] font-semibold tracking-[0.25em] uppercase text-accent-warm mb-5 text-center">/details</p>
+            <h2 className="font-serif text-[clamp(2rem,4vw,2.8rem)] text-foreground mb-4 text-center">Good to know.</h2>
+            <p className="text-[16px] text-muted text-center mb-12 max-w-lg mx-auto leading-relaxed">
+              The logistical stuff that matters. We&apos;re flexible, responsive, and built for how students actually work.
+            </p>
           </ScrollReveal>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {[
-              {
-                icon: "event_available",
-                title: "Flexible scheduling",
-                desc: "Book sessions that work for you. Evenings and weekends available.",
-              },
-              {
-                icon: "chat",
-                title: "Open communication",
-                desc: "Text, email, or message anytime. We're accessible, not bureaucratic.",
-              },
-              {
-                icon: "groups",
-                title: "Small cohort",
-                desc: "We take ~15 students per cycle. You're not a number.",
-              },
+              { icon: "event_available", title: "Flexible scheduling", desc: "Evenings and weekends available. We work around your schedule, not the other way around." },
+              { icon: "chat", title: "Always reachable", desc: "Text, email, or message us anytime. We respond fast and don't hide behind a support inbox." },
+              { icon: "language", title: "Fully remote", desc: "We work with students everywhere. Video calls, shared docs, real-time collaboration." },
+              { icon: "forum", title: "Talk to past clients", desc: "Want to hear from someone we've worked with? Just ask and we'll set up a private call." },
             ].map((fact, i) => (
               <ScrollReveal key={fact.title} delay={i * 0.08}>
-                <div className="bg-card border border-border rounded-xl p-6">
-                  <span className="material-symbols-outlined text-[22px] text-accent mb-3 block">
-                    {fact.icon}
-                  </span>
-                  <h3 className="text-[13px] font-semibold text-foreground mb-1.5">
-                    {fact.title}
-                  </h3>
-                  <p className="text-[12px] text-muted leading-relaxed">
-                    {fact.desc}
-                  </p>
-                </div>
+                <InteractiveImage className="bg-card border border-border rounded-2xl p-6 cursor-pointer h-full" intensity={4} scale={1.02}>
+                  <div className="w-10 h-10 rounded-xl bg-accent-light flex items-center justify-center mb-4">
+                    <span className="material-symbols-outlined text-[22px] text-accent">{fact.icon}</span>
+                  </div>
+                  <h3 className="text-[16px] font-bold text-foreground mb-2">{fact.title}</h3>
+                  <p className="text-[14px] text-muted leading-relaxed">{fact.desc}</p>
+                </InteractiveImage>
               </ScrollReveal>
             ))}
           </div>
@@ -214,24 +174,26 @@ export default function HowItWorksPage() {
 
       {/* CTA */}
       <section className="pb-24 lg:pb-32">
-        <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <ScrollReveal>
-            <p className="text-[15px] text-muted mb-6">
-              Ready to see if this is the right fit?
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Link
-                href="/book"
-                className="bg-accent text-white text-[13px] font-medium px-7 py-3 rounded-lg hover:bg-accent-hover hover:-translate-y-[1px] transition-all duration-200"
-              >
-                Book an Intro Call
-              </Link>
-              <Link
-                href="/services"
-                className="border border-border text-foreground text-[13px] font-medium px-7 py-3 rounded-lg hover:border-accent hover:text-accent transition-all duration-200"
-              >
-                View Services
-              </Link>
+            <div className="bg-accent rounded-3xl px-8 py-14 lg:px-16 lg:py-16 text-center relative overflow-hidden">
+              <div className="absolute inset-0 dot-grid-light opacity-10" />
+              <div className="relative z-10">
+                <h2 className="font-serif text-[clamp(1.8rem,3.5vw,2.5rem)] text-white mb-4">
+                  Ready to get started?
+                </h2>
+                <p className="text-[16px] text-white/45 mb-8 max-w-md mx-auto leading-relaxed">
+                  Book a free intro call and we&apos;ll walk you through how the process works for your specific situation.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                  <Link href="/book" className="bg-white text-accent text-[15px] font-semibold px-9 py-4 rounded-xl hover:-translate-y-[2px] hover:shadow-xl transition-all duration-300 interactive-lift" style={{ opacity: 1 }}>
+                    Book an Intro Call
+                  </Link>
+                  <Link href="/services" className="border-2 border-white/20 text-white text-[15px] font-semibold px-9 py-4 rounded-xl hover:bg-white/10 hover:border-white/30 transition-all duration-300">
+                    View Services
+                  </Link>
+                </div>
+              </div>
             </div>
           </ScrollReveal>
         </div>

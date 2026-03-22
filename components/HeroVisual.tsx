@@ -1,141 +1,135 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
+import InteractiveImage from "./InteractiveImage";
 
 export default function HeroVisual() {
   const { scrollY } = useScroll();
-  const y1 = useTransform(scrollY, [0, 600], [0, -30]);
-  const y2 = useTransform(scrollY, [0, 600], [0, -15]);
-  const y3 = useTransform(scrollY, [0, 600], [0, -45]);
+  const y1 = useTransform(scrollY, [0, 600], [0, -35]);
+  const y2 = useTransform(scrollY, [0, 600], [0, -18]);
+  const y3 = useTransform(scrollY, [0, 600], [0, -50]);
 
   return (
-    <div className="relative hidden lg:block h-[520px]">
-      {/* Essay review card */}
-      <motion.div
-        style={{ y: y1 }}
-        className="absolute top-4 left-0 w-[340px] bg-card border border-border rounded-xl ambient-shadow-lg overflow-hidden"
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.7, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-      >
-        {/* Header bar */}
-        <div className="flex items-center gap-2 px-5 py-3 border-b border-border bg-background">
-          <div className="flex gap-1.5">
-            <span className="w-2 h-2 rounded-full bg-red-300" />
-            <span className="w-2 h-2 rounded-full bg-yellow-300" />
-            <span className="w-2 h-2 rounded-full bg-green-300" />
-          </div>
-          <span className="text-[11px] text-muted ml-2">
-            Personal Statement — Draft 3
-          </span>
-        </div>
-
-        {/* Essay content */}
-        <div className="px-5 py-4 space-y-3">
-          <p className="text-[12px] text-foreground/80 leading-relaxed">
-            Growing up in a small coastal town, I never imagined that my love
-            for{" "}
-            <span className="bg-highlight px-0.5 rounded-sm">
-              marine biology
-            </span>{" "}
-            would teach me more about community than any textbook ever could.
-          </p>
-          <p className="text-[12px] text-foreground/80 leading-relaxed">
-            The summer I spent cataloguing tide pool species wasn&apos;t just
-            scientific fieldwork —{" "}
-            <span className="bg-highlight px-0.5 rounded-sm">
-              it was the first time I felt my curiosity could actually matter
+    <div className="relative hidden lg:block h-[560px]">
+      {/* Essay review card — main visual */}
+      <motion.div style={{ y: y1 }}>
+        <InteractiveImage
+          className="absolute top-[20px] left-0 w-[340px] bg-card rounded-xl ambient-shadow-lg z-10 overflow-hidden cursor-pointer border border-border"
+          intensity={4}
+          scale={1.02}
+        >
+          <div className="flex items-center gap-2 px-5 py-2.5 border-b border-border bg-cream">
+            <div className="flex gap-1.5">
+              <span className="w-[7px] h-[7px] rounded-full bg-red-300/80" />
+              <span className="w-[7px] h-[7px] rounded-full bg-yellow-300/80" />
+              <span className="w-[7px] h-[7px] rounded-full bg-green-300/80" />
+            </div>
+            <span className="text-[10px] text-muted font-medium ml-1.5 tracking-wide">
+              Personal Statement — Draft 3
             </span>
-            .
-          </p>
-          <p className="text-[12px] text-foreground/50 leading-relaxed">
-            That realization changed how I approached everything...
-          </p>
-        </div>
+          </div>
+          <div className="px-5 py-4 space-y-2.5">
+            <p className="text-[12px] text-foreground/80 leading-[1.7]">
+              Growing up in a small coastal town, I never imagined that my love
+              for{" "}
+              <span className="bg-highlight px-1 rounded-sm font-medium">
+                marine biology
+              </span>{" "}
+              would teach me more about community than any textbook ever could.
+            </p>
+            <p className="text-[12px] text-foreground/50 leading-[1.7]">
+              The summer I spent cataloguing tide pool species wasn&apos;t just
+              fieldwork —{" "}
+              <span className="bg-highlight px-1 rounded-sm">
+                it was the first time I felt my curiosity could matter
+              </span>
+              ...
+            </p>
+          </div>
+        </InteractiveImage>
       </motion.div>
 
       {/* Mentor feedback bubble */}
       <motion.div
-        style={{ y: y2 }}
-        className="absolute top-[200px] left-[200px] w-[220px] bg-accent text-white rounded-xl rounded-bl-sm p-4 ambient-shadow-lg z-10"
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      >
-        <div className="flex items-center gap-2 mb-2">
-          <div className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center">
-            <span className="text-[9px] font-semibold">JV</span>
-          </div>
-          <span className="text-[10px] font-medium text-white/70">
-            Dr. Vance
-          </span>
-        </div>
-        <p className="text-[11px] text-white/90 leading-relaxed">
-          &ldquo;This is strong. Try linking the tide pool moment directly to
-          your research interest — make the connection explicit.&rdquo;
-        </p>
-      </motion.div>
-
-      {/* Acceptance badge */}
-      <motion.div
         style={{ y: y3 }}
-        className="absolute top-[60px] right-0 bg-card border border-border rounded-xl p-4 ambient-shadow-lg"
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
+        className="absolute top-[10px] right-[-10px] z-20"
       >
-        <div className="flex items-center gap-2.5">
-          <div className="w-8 h-8 rounded-lg bg-green-50 flex items-center justify-center">
-            <span className="material-symbols-outlined text-[18px] text-success">
-              check_circle
+        <InteractiveImage
+          className="w-[200px] bg-accent text-white rounded-xl rounded-bl-sm p-4 cursor-pointer"
+          intensity={6}
+          scale={1.04}
+          glowColor="rgba(26, 35, 64, 0.25)"
+        >
+          <div className="flex items-center gap-2 mb-2">
+            <div className="w-6 h-6 rounded-full bg-white/15 flex items-center justify-center border border-white/10">
+              <span className="text-[9px] font-bold">AM</span>
+            </div>
+            <span className="text-[10px] font-medium text-white/60">
+              Adit
             </span>
           </div>
-          <div>
-            <p className="text-[11px] font-medium text-foreground">Accepted</p>
-            <p className="text-[10px] text-muted">Yale University &apos;28</p>
-          </div>
-        </div>
+          <p className="text-[11px] text-white/85 leading-[1.6]">
+            &ldquo;Strong opening. Link the tide pool moment directly to your
+            research interest.&rdquo;
+          </p>
+        </InteractiveImage>
       </motion.div>
 
-      {/* Wide image panel — landscape placeholder */}
+      {/* Profile-building card */}
+      <motion.div style={{ y: y2 }}>
+        <InteractiveImage
+          className="absolute top-[250px] left-[200px] w-[280px] bg-card border border-border rounded-xl p-5 cursor-pointer z-10"
+          intensity={4}
+          scale={1.02}
+        >
+          <div className="flex items-center gap-2 mb-3">
+            <span className="material-symbols-outlined text-[18px] text-accent">rocket_launch</span>
+            <p className="text-[12px] font-semibold text-foreground">Project Pipeline</p>
+          </div>
+          <div className="space-y-2">
+            <div className="flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-green-400" />
+              <p className="text-[11px] text-muted">Research initiative — launched</p>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-yellow-400" />
+              <p className="text-[11px] text-muted">Nonprofit project — in progress</p>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-border" />
+              <p className="text-[11px] text-muted">Blog/publication — planned</p>
+            </div>
+          </div>
+        </InteractiveImage>
+      </motion.div>
+
+      {/* Second mentor note */}
       <motion.div
         style={{ y: y2 }}
-        className="absolute bottom-8 left-4 right-12 h-[140px] bg-warm rounded-xl border border-border overflow-hidden"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
+        className="absolute bottom-[120px] right-0 z-10"
       >
-        {/* REPLACE: Swap for a real landscape image using next/image */}
-        <div className="w-full h-full flex items-center justify-center gap-6">
-          <div className="flex flex-col items-center gap-1 opacity-30">
-            <span className="material-symbols-outlined text-[24px] text-muted">
-              photo_camera
+        <InteractiveImage
+          className="w-[210px] bg-accent text-white rounded-xl rounded-br-sm p-4 cursor-pointer"
+          intensity={5}
+          scale={1.04}
+          glowColor="rgba(26, 35, 64, 0.25)"
+        >
+          <div className="flex items-center gap-2 mb-2">
+            <div className="w-6 h-6 rounded-full bg-white/15 flex items-center justify-center border border-white/10">
+              <span className="text-[9px] font-bold">AN</span>
+            </div>
+            <span className="text-[10px] font-medium text-white/60">
+              Aum
             </span>
-            <p className="text-[10px] text-muted">Landscape photo</p>
           </div>
-        </div>
-
-        {/* Subtle grid texture overlay */}
-        <div
-          className="absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle, #111 0.5px, transparent 0.5px)",
-            backgroundSize: "16px 16px",
-          }}
-        />
+          <p className="text-[11px] text-white/85 leading-[1.6]">
+            &ldquo;The project angle is great. Let&apos;s make sure the activities list reflects this too.&rdquo;
+          </p>
+        </InteractiveImage>
       </motion.div>
 
-      {/* Floating stat badge */}
-      <motion.div
-        className="absolute bottom-[170px] right-2 bg-card border border-border rounded-lg px-3.5 py-2.5 ambient-shadow z-10"
-        initial={{ opacity: 0, x: 10 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 0.9, ease: [0.22, 1, 0.36, 1] }}
-      >
-        <p className="font-serif text-xl text-accent leading-none">98%</p>
-        <p className="text-[9px] text-muted mt-0.5">Top 20 Placement</p>
-      </motion.div>
+      {/* Dot grid background element */}
+      <div className="absolute bottom-0 left-4 right-12 h-[120px] rounded-xl bg-accent-light/40 dot-grid-light opacity-60" />
     </div>
   );
 }

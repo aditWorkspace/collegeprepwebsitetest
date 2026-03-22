@@ -18,9 +18,9 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "The Academic Atelier | Premium College Consulting",
+  title: "Vergre Consulting | College Profile Building",
   description:
-    "Personalized, student-first college consulting. We help students preserve their authentic voice while crafting standout applications.",
+    "We help students build real profiles and tell authentic stories. Not just essay editing — full candidate development.",
 };
 
 export default function RootLayout({

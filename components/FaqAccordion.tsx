@@ -13,20 +13,22 @@ export default function FaqAccordion({ items }: { items: FaqItem[] }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <div className="space-y-3">
+    <div className="space-y-4">
       {items.map((item, i) => (
         <ScrollReveal key={i} delay={i * 0.05}>
-          <div className="bg-card border border-border rounded-xl overflow-hidden">
+          <div className={`bg-card border rounded-2xl overflow-hidden transition-all duration-300 ${
+            openIndex === i ? "border-accent/30 glow-shadow" : "border-border"
+          }`}>
             <button
               onClick={() => setOpenIndex(openIndex === i ? null : i)}
-              className="w-full flex items-center justify-between px-6 py-5 text-left group cursor-pointer"
+              className="w-full flex items-center justify-between px-7 py-6 text-left group cursor-pointer"
             >
-              <span className="text-[14px] font-medium text-foreground pr-4 leading-snug">
+              <span className="text-[16px] font-semibold text-foreground pr-4 leading-snug">
                 {item.question}
               </span>
               <span
-                className={`material-symbols-outlined text-[20px] text-muted transition-transform duration-300 shrink-0 ${
-                  openIndex === i ? "rotate-180" : ""
+                className={`material-symbols-outlined text-[22px] text-muted transition-transform duration-300 shrink-0 ${
+                  openIndex === i ? "rotate-180 text-accent" : ""
                 }`}
               >
                 expand_more
@@ -42,8 +44,8 @@ export default function FaqAccordion({ items }: { items: FaqItem[] }) {
                   transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
                   className="overflow-hidden"
                 >
-                  <div className="px-6 pb-5 border-t border-border pt-4">
-                    <p className="text-[14px] text-muted leading-relaxed">
+                  <div className="px-7 pb-6 border-t border-border pt-5">
+                    <p className="text-[15px] text-muted leading-[1.7]">
                       {item.answer}
                     </p>
                   </div>

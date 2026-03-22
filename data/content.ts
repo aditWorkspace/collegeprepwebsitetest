@@ -13,46 +13,36 @@ export const navLinks = [
   { label: "About", href: "/about" },
   { label: "How It Works", href: "/how-it-works" },
   { label: "Services", href: "/services" },
-  { label: "Results", href: "/results" },
+  { label: "Philosophy", href: "/philosophy" },
 ];
 
 // ============================================================
-// CONSULTANTS — REPLACE with real info
+// FOUNDERS / COUNSELORS
 // ============================================================
-export const consultants = [
+export const counselors = [
   {
-    id: "consultant-1",
-    name: "Dr. Julian Vance",              // REPLACE
-    title: "Founder & Lead Strategist",    // REPLACE
-    school: "Princeton University",        // REPLACE
-    degree: "Ph.D.",                       // REPLACE
-    image: null as string | null,          // REPLACE: e.g. "/images/julian.jpg"
-    sat: "1590 / 99th Percentile",         // REPLACE
-    admittedTo: ["Princeton", "Yale", "Columbia", "UPenn"], // REPLACE
-    specialties: ["Ivy League Strategy", "STEM Narratives", "Research Profile"], // REPLACE
-    bio: "PLACEHOLDER: A brief personal bio about your background, why you care about college consulting, and what makes your approach different.", // REPLACE
-    highlights: [
-      "PLACEHOLDER: Key accomplishment or credential",   // REPLACE
-      "PLACEHOLDER: Key accomplishment or credential",   // REPLACE
-      "PLACEHOLDER: Key accomplishment or credential",   // REPLACE
-    ],
+    id: "adit",
+    name: "Adit Mittal",
+    title: "Co-Founder",
+    school: "UC Berkeley",
+    image: null as string | null,
+    sat: "1580",
+    admittedTo: ["UC Berkeley", "Carnegie Mellon", "UT Austin", "UC San Diego", "UC Davis", "UC Irvine"],
+    activities: ["Entrepreneurship", "DECA", "Robotics"],
+    bio: "Adit built his college profile around entrepreneurship, competitive business, and robotics — not by following a formula, but by pursuing things he genuinely cared about. He brings that same approach to every student he works with.",
+    linkedin: "https://www.linkedin.com/in/adit-mittal14/",
   },
   {
-    id: "consultant-2",
-    name: "Sarah Cheng",                   // REPLACE
-    title: "Head of Narrative & Creative", // REPLACE
-    school: "Stanford University",         // REPLACE
-    degree: "MFA",                         // REPLACE
-    image: null as string | null,          // REPLACE: e.g. "/images/sarah.jpg"
-    sat: "1580 / 99th Percentile",         // REPLACE
-    admittedTo: ["Stanford", "Brown", "Cornell", "Duke"], // REPLACE
-    specialties: ["Essay Voice", "Humanities & Arts", "Transfer Applications"], // REPLACE
-    bio: "PLACEHOLDER: A brief personal bio about your background, why you care about college consulting, and what makes your approach different.", // REPLACE
-    highlights: [
-      "PLACEHOLDER: Key accomplishment or credential",   // REPLACE
-      "PLACEHOLDER: Key accomplishment or credential",   // REPLACE
-      "PLACEHOLDER: Key accomplishment or credential",   // REPLACE
-    ],
+    id: "aum",
+    name: "Aum Narkar",
+    title: "Co-Founder",
+    school: "NYU Stern (Early Decision)",
+    image: null as string | null,
+    sat: "1560",
+    admittedTo: ["NYU Stern (ED)"],
+    activities: ["DECA", "FundFacts", "Robotics World Championship", "Political Campaign Work"],
+    bio: "Aum's profile spanned business, tech, and civic engagement — from building FundFacts to competing at the robotics world championship to working on a political campaign. He knows what it takes to build a profile that's genuinely distinctive.",
+    linkedin: "https://www.linkedin.com/in/aum-narkar-912017217/",
   },
 ];
 
@@ -62,104 +52,78 @@ export const consultants = [
 export const testimonials = [
   {
     id: 1,
-    quote: "They didn't try to rewrite my story — they helped me understand it better. By the time I submitted, I actually felt proud of my essays, not just relieved.", // REPLACE
-    name: "Alex M.",          // REPLACE
-    type: "High School Senior", // REPLACE
-    accepted: "Yale University", // REPLACE
-    year: "2025",              // REPLACE
+    quote: "They didn't try to rewrite my story — they helped me understand it better. By the time I submitted, I actually felt proud of my essays, not just relieved.",
+    name: "Alex M.",
+    type: "High School Senior",
+    accepted: "Yale University",
+    year: "2025",
   },
   {
     id: 2,
-    quote: "After working with two other consultants who gave me cookie-cutter advice, this was completely different. They actually listened. My essays finally sounded like me.", // REPLACE
-    name: "Priya K.",          // REPLACE
-    type: "High School Senior", // REPLACE
-    accepted: "Stanford University", // REPLACE
-    year: "2025",              // REPLACE
+    quote: "After working with two other counselors who gave me cookie-cutter advice, this was completely different. They actually listened. My essays finally sounded like me.",
+    name: "Priya K.",
+    type: "High School Senior",
+    accepted: "Stanford University",
+    year: "2025",
   },
   {
     id: 3,
-    quote: "The dual-mentor model is a game changer. Having two sharp perspectives on every essay — not just one — made my application so much stronger.", // REPLACE
-    name: "James L.",          // REPLACE
-    type: "Transfer Student",  // REPLACE
-    accepted: "Columbia University", // REPLACE
-    year: "2024",              // REPLACE
+    quote: "What made them different is that they actually helped me build things — not just write about them. My application felt real because it was.",
+    name: "James L.",
+    type: "High School Senior",
+    accepted: "Columbia University",
+    year: "2024",
   },
   {
     id: 4,
-    quote: "As a parent, I was skeptical of consulting services. But these two genuinely cared about my daughter. She grew so much through the process — not just as an applicant, but as a writer.", // REPLACE
-    name: "Dr. Rebecca T.",    // REPLACE
-    type: "Parent",            // REPLACE
-    accepted: "UChicago",      // REPLACE
-    year: "2025",              // REPLACE
+    quote: "As a parent, I was skeptical of consulting services. But these two genuinely cared about my daughter. She grew so much through the process — not just as an applicant, but as a person.",
+    name: "Dr. Rebecca T.",
+    type: "Parent",
+    accepted: "UChicago",
+    year: "2025",
   },
   {
     id: 5,
-    quote: "I was a first-gen applicant with no idea where to start. They didn't just help me apply — they helped me believe I belonged at these schools.", // REPLACE
-    name: "Maria S.",          // REPLACE
-    type: "First-Gen Applicant", // REPLACE
-    accepted: "Brown University", // REPLACE
-    year: "2024",              // REPLACE
+    quote: "I was a first-gen applicant with no idea where to start. They didn't just help me apply — they helped me believe I belonged at these schools.",
+    name: "Maria S.",
+    type: "First-Gen Applicant",
+    accepted: "Brown University",
+    year: "2024",
   },
 ];
 
 // ============================================================
-// STATS — REPLACE with real numbers
-// ============================================================
-export const stats = [
-  { value: "100%", label: "Top 30 Placement" },     // REPLACE
-  { value: "1,200+", label: "Essays Refined" },       // REPLACE
-  { value: "15:1", label: "Student-to-Mentor Ratio" }, // REPLACE
-  { value: "84%", label: "Client Referral Rate" },     // REPLACE
-];
-
-export const featuredColleges = [
-  "Yale", "Stanford", "Columbia", "UChicago", "UPenn", "Brown", "Cornell", "Duke",
-]; // REPLACE
-
-// ============================================================
-// SERVICES
+// SERVICES — Hourly model
 // ============================================================
 export const services = [
   {
-    name: "Full Program",
-    description: "End-to-end support from school list to final submission. Includes both mentors, unlimited essay reviews, and full strategic guidance.",
-    price: "PLACEHOLDER",  // REPLACE: e.g. "$X,XXX"
+    name: "20-Hour Package",
+    description: "Targeted support for students who need help refining their profile, building key projects, and crafting their narrative across applications.",
+    price: "$3,000",
     features: [
-      "Dedicated primary mentor",
-      "Full essay development (all schools)",
-      "School list strategy",
-      "Activities & honors positioning",
-      "Second mentor review on every essay",
+      "Full access to both founders",
+      "Profile-building strategy sessions",
+      "Project ideation and development support",
+      "Essay development and feedback",
+      "Activities list positioning",
+      "School list guidance",
+    ],
+    highlighted: false,
+  },
+  {
+    name: "40-Hour Package",
+    description: "Comprehensive, end-to-end support. From building your profile and launching real projects to writing every essay and preparing for interviews.",
+    price: "$5,500",
+    features: [
+      "Full access to both founders",
+      "Complete profile-building from the ground up",
+      "Project development and launch support",
+      "Full essay writing across all schools",
+      "Activities and honors positioning",
       "Interview preparation",
-      "Unlimited check-ins",
+      "Unlimited check-ins between sessions",
     ],
     highlighted: true,
-  },
-  {
-    name: "Essay Intensive",
-    description: "Focused support on essay writing. Ideal for students who have their strategy but need expert help crafting their narrative.",
-    price: "PLACEHOLDER",  // REPLACE
-    features: [
-      "Up to 8 essay drafts",
-      "Narrative arc development",
-      "Line-level editing & feedback",
-      "Second mentor review included",
-      "Supplement strategy",
-    ],
-    highlighted: false,
-  },
-  {
-    name: "Hourly Advising",
-    description: "Flexible, targeted sessions for students who need guidance on specific parts of their application.",
-    price: "PLACEHOLDER",  // REPLACE: e.g. "$XXX/hr"
-    features: [
-      "Book individual sessions",
-      "Essay review & feedback",
-      "School list consultation",
-      "Application strategy",
-      "Interview prep",
-    ],
-    highlighted: false,
   },
 ];
 
@@ -168,16 +132,20 @@ export const services = [
 // ============================================================
 export const faqs = [
   {
-    question: "How is this different from other college consulting services?",
-    answer: "Most services optimize for volume — they run students through a formula. We work with a deliberately small number of students and focus on helping each one find and communicate their real story. Both mentors are involved with every student, and we guarantee dual review on every essay before submission.",
+    question: "How is this different from other college counseling services?",
+    answer: "Most services focus on polishing what you already have. We actually help you build it. That means working with you on projects, initiatives, and experiences that make your application genuinely stronger — not just better written.",
   },
   {
-    question: "How many students do you take per cycle?",
-    answer: "We intentionally keep our cohort small — typically 15 students per application cycle. This allows us to give each student the depth of attention they deserve.",
+    question: "What do you mean by 'profile-building'?",
+    answer: "It means we don't just help you write about your activities — we help you create them. Whether that's launching a project, starting an initiative, or deepening your involvement in something you care about, we help you build the substance behind your application.",
+  },
+  {
+    question: "How many students do you work with?",
+    answer: "We keep it small on purpose. We work with a limited number of students each cycle so we can actually get to know you and give you real, personal attention — not recycled advice.",
   },
   {
     question: "When should we start?",
-    answer: "Ideally, the summer before senior year. That said, we've worked effectively with students starting as late as October. The earlier we begin, the more thoughtful and less rushed the process feels.",
+    answer: "The earlier the better. If you start sophomore or junior year, we can actually help you build meaningful projects and experiences before application season. That said, we've worked effectively with students starting the summer before senior year.",
   },
   {
     question: "Can we talk to families you've worked with?",
@@ -185,15 +153,11 @@ export const faqs = [
   },
   {
     question: "Do you write essays for students?",
-    answer: "No. We believe the essay should be genuinely yours. We guide your thinking, help you find your strongest material, give direct feedback on drafts, and push you to go deeper — but the writing is always yours. That's the whole point.",
+    answer: "No. We believe the essay should be genuinely yours. We guide your thinking, help you find your strongest material, give direct feedback on drafts, and push you to go deeper — but the writing is always yours.",
   },
   {
-    question: "What does the dual-mentor model mean in practice?",
-    answer: "Each student has a primary mentor who leads their strategy and is their main point of contact. The second mentor stays genuinely in the loop — available for sessions, and guaranteed to review every essay before it's submitted. Two sharp perspectives. No outsourcing.",
-  },
-  {
-    question: "Do you offer financial aid or scholarship consulting?",
-    answer: "We can provide general guidance on financial aid strategy, but we're not financial aid specialists. Our focus is on helping you present the strongest possible application.",
+    question: "What does 'full access to both founders' mean?",
+    answer: "It means you're working directly with Adit and Aum — not interns, not junior staff. Both of us stay involved with every student, and both review your work before submission.",
   },
 ];
 
@@ -208,7 +172,7 @@ export const footerNav = {
     { label: "Services", href: "/services" },
   ],
   resources: [
-    { label: "Results", href: "/results" },
+    { label: "Philosophy", href: "/philosophy" },
     { label: "Testimonials", href: "/testimonials" },
     { label: "FAQ", href: "/faq" },
   ],
@@ -217,8 +181,8 @@ export const footerNav = {
     { label: "Contact", href: "/contact" },
   ],
   contact: {
-    email: "hello@academicatelier.com",   // REPLACE
-    location: "New York, NY",             // REPLACE or remove
+    email: "hello@vergreconsulting.com",   // REPLACE
+    location: "Remote",
     instagram: "#",                        // REPLACE
     linkedin: "#",                         // REPLACE
   },
