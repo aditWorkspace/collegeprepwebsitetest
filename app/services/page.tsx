@@ -5,30 +5,30 @@ import InteractiveImage from "@/components/InteractiveImage";
 import { services } from "@/data/content";
 
 export const metadata: Metadata = {
-  title: "Services | Vergre Consulting",
+  title: "Services | Verge Consulting",
   description: "Hourly packages with full access to both founders. Profile building, project development, and essay support.",
 };
 
 export default function ServicesPage() {
   return (
     <div className="pt-[64px]">
-      <section className="py-20 lg:py-28 dot-grid-light">
+      <section className="py-16 lg:py-24 dot-grid-light">
         <div className="max-w-3xl mx-auto px-6 lg:px-8">
           <ScrollReveal>
             <p className="text-[12px] font-semibold tracking-[0.25em] uppercase text-accent-warm mb-5">/services</p>
             <h1 className="font-serif text-[clamp(2.5rem,5vw,4rem)] text-foreground leading-[1.08] tracking-tight mb-6">
-              Simple pricing. <em className="text-accent">Real support.</em>
+              Simple pricing. <span className="text-accent font-semibold">Real support.</span>
             </h1>
             <p className="text-[17px] text-muted leading-[1.7] max-w-lg">
               Both packages include full access to both founders. No interns,
-              no hand-offs — just direct, personal support for building your
+              no hand-offs. Just direct, personal support for building your
               profile and crafting your application.
             </p>
           </ScrollReveal>
         </div>
       </section>
 
-      <section className="pb-20 lg:pb-28">
+      <section className="pb-16 lg:pb-24">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {services.map((service, i) => (
@@ -74,7 +74,7 @@ export default function ServicesPage() {
       </section>
 
       {/* What's included */}
-      <section className="pb-20 lg:pb-28">
+      <section className="pb-16 lg:pb-24">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <ScrollReveal>
             <div className="accent-line-center w-16 mx-auto mb-8" />
@@ -87,7 +87,7 @@ export default function ServicesPage() {
           </ScrollReveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             {[
-              { icon: "group", title: "Both founders, directly", desc: "You're never working with someone we hired — you're working with us. Every session, every review." },
+              { icon: "group", title: "Both founders, directly", desc: "You're never working with someone we hired. You're working with us. Every session, every review." },
               { icon: "rocket_launch", title: "Project development", desc: "We help you build real projects and initiatives, not just write about ones that already exist." },
               { icon: "edit_note", title: "Full essay support", desc: "From brainstorming to final draft. Every essay reviewed by both of us before submission." },
               { icon: "psychology", title: "Profile strategy", desc: "We help you figure out what's missing and what to build to make your application whole." },
@@ -107,7 +107,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Bottom CTA */}
-      <section className="pb-24 lg:pb-32">
+      <section className="pb-20 lg:pb-28">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <ScrollReveal>
             <div className="bg-accent rounded-3xl px-8 py-14 lg:px-16 lg:py-16 text-center relative overflow-hidden">

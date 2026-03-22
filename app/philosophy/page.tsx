@@ -4,30 +4,30 @@ import ScrollReveal from "@/components/ScrollReveal";
 import InteractiveImage from "@/components/InteractiveImage";
 
 export const metadata: Metadata = {
-  title: "Philosophy | Vergre Consulting",
+  title: "Philosophy | Verge Consulting",
   description: "What we believe about college admissions, profile building, and helping students tell their real stories.",
 };
 
 export default function PhilosophyPage() {
   return (
     <div className="pt-[64px]">
-      <section className="py-20 lg:py-28 dot-grid-light">
+      <section className="py-16 lg:py-24 dot-grid-light">
         <div className="max-w-3xl mx-auto px-6 lg:px-8">
           <ScrollReveal>
             <p className="text-[12px] font-semibold tracking-[0.25em] uppercase text-accent-warm mb-5">/philosophy</p>
             <h1 className="font-serif text-[clamp(2.5rem,5vw,4rem)] text-foreground leading-[1.08] tracking-tight mb-6">
-              What we <em className="text-accent">believe.</em>
+              What we <span className="text-accent font-semibold">believe.</span>
             </h1>
             <p className="text-[17px] text-muted leading-[1.7] max-w-lg">
               The college admissions process is broken in a lot of ways. Here&apos;s
-              how we think about it — and why we do things differently.
+              how we think about it, and why we do things differently.
             </p>
           </ScrollReveal>
         </div>
       </section>
 
       {/* Core beliefs */}
-      <section className="pb-20 lg:pb-28">
+      <section className="pb-16 lg:pb-24">
         <div className="max-w-3xl mx-auto px-6 lg:px-8">
           <div className="space-y-16">
             {[
@@ -36,14 +36,14 @@ export default function PhilosophyPage() {
                 icon: "architecture",
                 paragraphs: [
                   "There's a difference between helping someone look impressive and helping someone actually become more interesting. Most counseling does the first thing. We try to do the second.",
-                  "That means we spend real time helping students develop projects, pursue ideas, and build experiences that are genuinely theirs — not cookie-cutter activities designed to check a box.",
+                  "That means we spend real time helping students develop projects, pursue ideas, and build experiences that are genuinely theirs, not cookie-cutter activities designed to check a box.",
                 ],
               },
               {
                 title: "The best applications tell a true story.",
                 icon: "auto_stories",
                 paragraphs: [
-                  "Admissions officers read thousands of applications. The ones that stand out aren't the most polished — they're the ones where everything feels connected and real. Where you read the essay, look at the activities, and think: \"yeah, this makes sense for this person.\"",
+                  "Admissions officers read thousands of applications. The ones that stand out aren't the most polished. They're the ones where everything feels connected and real. Where you read the essay, look at the activities, and think: \"yeah, this makes sense for this person.\"",
                   "That kind of coherence can't be faked. It has to come from actually knowing who you are and building your application around that.",
                 ],
               },
@@ -52,14 +52,14 @@ export default function PhilosophyPage() {
                 icon: "school",
                 paragraphs: [
                   "We went through this process recently. We know what it feels like to sit in front of a blank Common App essay. We know what it's like to get advice that doesn't feel right but you follow it anyway because the person sounds confident.",
-                  "That's why we started Vergre. Not because we think we have all the answers, but because we know what bad advice looks like — and we know what actually worked for us.",
+                  "That's why we started Verge. Not because we think we have all the answers, but because we know what bad advice looks like and we know what actually worked for us.",
                 ],
               },
               {
                 title: "Small is better.",
                 icon: "groups",
                 paragraphs: [
-                  "We could take on more students. We choose not to. Every student we work with gets direct access to both of us — not a junior associate, not an intern. That only works if we stay small.",
+                  "We could take on more students. We choose not to. Every student we work with gets direct access to both of us, not a junior associate, not an intern. That only works if we stay small.",
                   "We'd rather do great work for a few students than mediocre work for many.",
                 ],
               },
@@ -88,7 +88,7 @@ export default function PhilosophyPage() {
       </section>
 
       {/* What we don't do */}
-      <section className="py-20 lg:py-28 bg-card border-y border-border">
+      <section className="py-16 lg:py-24 bg-card border-y border-border">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <ScrollReveal>
             <p className="text-[12px] font-semibold tracking-[0.25em] uppercase text-accent-warm mb-5 text-center">/boundaries</p>
@@ -102,7 +102,7 @@ export default function PhilosophyPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             {[
               { title: "Guarantee admissions", desc: "Anyone who guarantees you'll get into a specific school is lying. We focus on making your application as strong as possible." },
-              { title: "Write your essays for you", desc: "Your essays need to sound like you. We guide, push, and refine — but the writing is always yours." },
+              { title: "Write your essays for you", desc: "Your essays need to sound like you. We guide, push, and refine, but the writing is always yours." },
               { title: "Use a formula", desc: "There's no template that works for everyone. We build strategy around who you actually are." },
               { title: "Scale up", desc: "We're not trying to become a big company. We're trying to do right by the students we work with." },
             ].map((item, i) => (
@@ -119,7 +119,7 @@ export default function PhilosophyPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 lg:py-32">
+      <section className="py-20 lg:py-28">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <ScrollReveal>
             <div className="bg-accent rounded-3xl px-8 py-14 lg:px-16 lg:py-16 text-center relative overflow-hidden">
@@ -127,10 +127,10 @@ export default function PhilosophyPage() {
               <div className="absolute -top-12 -right-12 w-40 h-40 rounded-full bg-white/[0.03]" />
               <div className="relative z-10">
                 <h2 className="font-serif text-[clamp(1.8rem,3.5vw,2.5rem)] text-white mb-4">
-                  Like how we think? Let&apos;s talk.
+                  Want to learn more about how we work?
                 </h2>
                 <p className="text-[16px] text-white/45 mb-8 max-w-md mx-auto leading-relaxed">
-                  A free intro call is the best way to see if we&apos;re aligned on what matters.
+                  Book a free 30-minute intro call and we&apos;ll walk you through our experience and services.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
                   <Link

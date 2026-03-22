@@ -24,12 +24,12 @@ export const counselors = [
     id: "adit",
     name: "Adit Mittal",
     title: "Co-Founder",
-    school: "UC Berkeley",
-    image: null as string | null,
+    school: "UC Berkeley (Haas + CS)",
+    image: "/founders/aditimage1.png",
     sat: "1580",
-    admittedTo: ["UC Berkeley", "Carnegie Mellon", "UT Austin", "UC San Diego", "UC Davis", "UC Irvine"],
-    activities: ["Entrepreneurship", "DECA", "Robotics"],
-    bio: "Adit works with students on finding the right projects and experiences to pursue, then helps them build a narrative that connects everything. His approach is hands-on — he stays involved from profile strategy through final essay review.",
+    admittedTo: ["UC Berkeley (Haas + CS)", "Carnegie Mellon", "UT Austin", "UC San Diego", "UC Davis", "UC Irvine"],
+    activities: ["DECA", "Entrepreneurship", "FundFacts (501c3)", "Robotics"],
+    bio: "Adit works with students to identify what they're genuinely passionate about and build their application around that. He helps with everything from finding the right projects to pursue, to developing a narrative that ties all of your activities together, to writing essays that actually sound like you. Having gone through the process himself at UC Berkeley Haas and CS, he understands what moves the needle in admissions and stays involved from the first strategy session through final submission.",
     linkedin: "https://www.linkedin.com/in/adit-mittal14/",
   },
   {
@@ -37,11 +37,11 @@ export const counselors = [
     name: "Aum Narkar",
     title: "Co-Founder",
     school: "NYU Stern (Early Decision)",
-    image: null as string | null,
+    image: "/founders/aumimage1.jpeg",
     sat: "1560",
     admittedTo: ["NYU Stern (ED)"],
-    activities: ["DECA", "FundFacts", "Robotics World Championship", "Political Campaign Work"],
-    bio: "Aum helps students figure out what makes them genuinely distinctive and then build on it. From project development to essay writing, he brings a sharp eye for what admissions officers are actually looking for.",
+    activities: ["Valedictorian", "DECA", "FundFacts", "Political Campaign Work", "Robotics World Championship"],
+    bio: "Aum helps students figure out what makes them genuinely distinctive and then build on it. He works closely with students on project development, essay writing, and strategic positioning, always pushing for specificity and authenticity over generic advice. His own experience getting into NYU Stern through Early Decision gave him a clear understanding of what admissions committees respond to, and he brings that perspective to every student he works with.",
     linkedin: "https://www.linkedin.com/in/aum-narkar-912017217/",
   },
 ];
@@ -52,7 +52,7 @@ export const counselors = [
 export const testimonials = [
   {
     id: 1,
-    quote: "They didn't try to rewrite my story — they helped me understand it better. By the time I submitted, I actually felt proud of my essays, not just relieved.",
+    quote: "They didn't try to rewrite my story. They helped me understand it better. By the time I submitted, I actually felt proud of my essays, not just relieved.",
     name: "Alex M.",
     type: "High School Senior",
     accepted: "Yale University",
@@ -68,7 +68,7 @@ export const testimonials = [
   },
   {
     id: 3,
-    quote: "What made them different is that they actually helped me build things — not just write about them. My application felt real because it was.",
+    quote: "What made them different is that they actually helped me build things, not just write about them. My application felt real because it was.",
     name: "James L.",
     type: "High School Senior",
     accepted: "Columbia University",
@@ -76,7 +76,7 @@ export const testimonials = [
   },
   {
     id: 4,
-    quote: "As a parent, I was skeptical of consulting services. But these two genuinely cared about my daughter. She grew so much through the process — not just as an applicant, but as a person.",
+    quote: "As a parent, I was skeptical of consulting services. But these two genuinely cared about my daughter. She grew so much through the process, not just as an applicant, but as a person.",
     name: "Dr. Rebecca T.",
     type: "Parent",
     accepted: "UChicago",
@@ -84,7 +84,7 @@ export const testimonials = [
   },
   {
     id: 5,
-    quote: "I was a first-gen applicant with no idea where to start. They didn't just help me apply — they helped me believe I belonged at these schools.",
+    quote: "I was a first-gen applicant with no idea where to start. They didn't just help me apply, they helped me believe I belonged at these schools.",
     name: "Maria S.",
     type: "First-Gen Applicant",
     accepted: "Brown University",
@@ -99,7 +99,7 @@ export const services = [
   {
     name: "20-Hour Package",
     description: "Targeted support for students who need help refining their profile, building key projects, and crafting their narrative across applications.",
-    price: "$3,000",
+    price: "$2,750",
     features: [
       "Full access to both founders",
       "Profile-building strategy sessions",
@@ -113,7 +113,7 @@ export const services = [
   {
     name: "40-Hour Package",
     description: "Comprehensive, end-to-end support. From building your profile and launching real projects to writing every essay and preparing for interviews.",
-    price: "$5,500",
+    price: "$5,000",
     features: [
       "Full access to both founders",
       "Complete profile-building from the ground up",
@@ -133,15 +133,15 @@ export const services = [
 export const faqs = [
   {
     question: "How is this different from other college counseling services?",
-    answer: "Most services focus on polishing what you already have. We actually help you build it. That means working with you on projects, initiatives, and experiences that make your application genuinely stronger — not just better written.",
+    answer: "Most services focus on polishing what you already have. We actually help you build it. That means working with you on projects, initiatives, and experiences that make your application genuinely stronger, not just better written.",
   },
   {
     question: "What do you mean by 'profile-building'?",
-    answer: "It means we don't just help you write about your activities — we help you create them. Whether that's launching a project, starting an initiative, or deepening your involvement in something you care about, we help you build the substance behind your application.",
+    answer: "It means we don't just help you write about your activities. We help you create them. Whether that's launching a project, starting an initiative, or deepening your involvement in something you care about, we help you build the substance behind your application.",
   },
   {
     question: "How many students do you work with?",
-    answer: "We keep it small on purpose. We work with a limited number of students each cycle so we can actually get to know you and give you real, personal attention — not recycled advice.",
+    answer: "We keep it small on purpose. We work with a limited number of students each cycle so we can actually get to know you and give you real, personal attention, not recycled advice.",
   },
   {
     question: "When should we start?",
@@ -149,15 +149,15 @@ export const faqs = [
   },
   {
     question: "Can we talk to families you've worked with?",
-    answer: "Absolutely. During or after your intro call, just ask — we're happy to connect you with past families who can share their experience.",
+    answer: "Absolutely. During or after your intro call, just ask. We're happy to connect you with past families who can share their experience.",
   },
   {
     question: "Do you write essays for students?",
-    answer: "No. We believe the essay should be genuinely yours. We guide your thinking, help you find your strongest material, give direct feedback on drafts, and push you to go deeper — but the writing is always yours.",
+    answer: "No. We believe the essay should be genuinely yours. We guide your thinking, help you find your strongest material, give direct feedback on drafts, and push you to go deeper. The writing is always yours.",
   },
   {
     question: "What does 'full access to both founders' mean?",
-    answer: "It means you're working directly with Adit and Aum — not interns, not junior staff. Both of us stay involved with every student, and both review your work before submission.",
+    answer: "It means you're working directly with Adit and Aum, not interns, not junior staff. You'll be assigned one of us as your primary counselor, but both of us stay involved with every student. Both founders review every essay and every application before submission. You can also request to work with either of us on any specific area.",
   },
 ];
 
@@ -181,7 +181,7 @@ export const footerNav = {
     { label: "Contact", href: "/contact" },
   ],
   contact: {
-    email: "hello@vergreconsulting.com",   // REPLACE
+    email: "hello@vergeconsulting.com",   // REPLACE
     location: "Remote",
     instagram: "#",                        // REPLACE
     linkedin: "#",                         // REPLACE

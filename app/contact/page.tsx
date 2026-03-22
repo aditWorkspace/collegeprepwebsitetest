@@ -5,19 +5,19 @@ import InteractiveImage from "@/components/InteractiveImage";
 import { footerNav } from "@/data/content";
 
 export const metadata: Metadata = {
-  title: "Contact | Vergre Consulting",
-  description: "Get in touch with Vergre Consulting.",
+  title: "Contact | Verge Consulting",
+  description: "Get in touch with Verge Consulting.",
 };
 
 export default function ContactPage() {
   return (
     <div className="pt-[64px]">
-      <section className="py-20 lg:py-28 dot-grid-light">
+      <section className="py-16 lg:py-24 dot-grid-light">
         <div className="max-w-3xl mx-auto px-6 lg:px-8">
           <ScrollReveal>
             <p className="text-[12px] font-semibold tracking-[0.25em] uppercase text-accent-warm mb-5">/contact</p>
             <h1 className="font-serif text-[clamp(2.5rem,5vw,4rem)] text-foreground leading-[1.08] tracking-tight mb-6">
-              Get in <em className="text-accent">touch.</em>
+              Get in <span className="text-accent font-semibold">touch.</span>
             </h1>
             <p className="text-[17px] text-muted leading-[1.7] max-w-lg">
               Have a question before booking? Drop us a line. We typically respond within 24 hours.
@@ -26,7 +26,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="pb-24 lg:pb-32">
+      <section className="pb-20 lg:pb-28">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-10">
             <ScrollReveal>

@@ -5,30 +5,30 @@ import InteractiveImage from "@/components/InteractiveImage";
 import { testimonials } from "@/data/content";
 
 export const metadata: Metadata = {
-  title: "Testimonials | Vergre Consulting",
+  title: "Testimonials | Verge Consulting",
   description: "What our students and their families have to say.",
 };
 
 export default function TestimonialsPage() {
   return (
     <div className="pt-[64px]">
-      <section className="py-20 lg:py-28 dot-grid-light">
+      <section className="py-16 lg:py-24 dot-grid-light">
         <div className="max-w-3xl mx-auto px-6 lg:px-8">
           <ScrollReveal>
             <p className="text-[12px] font-semibold tracking-[0.25em] uppercase text-accent-warm mb-5">/testimonials</p>
             <h1 className="font-serif text-[clamp(2.5rem,5vw,4rem)] text-foreground leading-[1.08] tracking-tight mb-6">
-              In their <em className="text-accent">own words.</em>
+              In their <span className="text-accent font-semibold">own words.</span>
             </h1>
             <p className="text-[17px] text-muted leading-[1.7] max-w-lg">
               Real experiences from real families we&apos;ve worked with. Want to
               hear it firsthand? We&apos;re happy to connect you with any of our
-              previous clients — just ask.
+              previous clients. Just ask.
             </p>
           </ScrollReveal>
         </div>
       </section>
 
-      <section className="pb-16 lg:pb-20">
+      <section className="pb-14 lg:pb-16">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {testimonials.map((t, i) => (
@@ -39,7 +39,7 @@ export default function TestimonialsPage() {
                       <span key={star} className="material-symbols-outlined text-[16px] text-accent-warm" style={{ fontVariationSettings: "'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24" }}>star</span>
                     ))}
                   </div>
-                  <p className="font-serif italic text-[18px] text-foreground leading-[1.65] mb-7 flex-1">
+                  <p className="font-serif text-[18px] text-foreground leading-[1.65] mb-7 flex-1">
                     &ldquo;{t.quote}&rdquo;
                   </p>
                   <div className="flex items-center justify-between pt-5 border-t border-border">
@@ -60,7 +60,7 @@ export default function TestimonialsPage() {
       </section>
 
       {/* Talk to past clients */}
-      <section className="pb-16 lg:pb-20">
+      <section className="pb-14 lg:pb-16">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <ScrollReveal>
             <div className="bg-accent rounded-3xl p-8 lg:p-10 relative overflow-hidden">
@@ -73,7 +73,7 @@ export default function TestimonialsPage() {
                 <div className="flex-1">
                   <h3 className="text-[19px] font-bold text-white mb-3">Want to talk to a past client?</h3>
                   <p className="text-[16px] text-white/50 leading-[1.7] mb-5">
-                    We&apos;re proud of the work we do, and we have nothing to hide. During or after your intro call, just ask — we&apos;ll set up a private conversation with a previous family so you can hear exactly how the experience was.
+                    We&apos;re proud of the work we do, and we have nothing to hide. During or after your intro call, just ask. We&apos;ll set up a private conversation with a previous family so you can hear exactly how the experience was.
                   </p>
                   <Link
                     href="/book"
@@ -90,14 +90,14 @@ export default function TestimonialsPage() {
       </section>
 
       {/* CTA */}
-      <section className="pb-24 lg:pb-32">
+      <section className="pb-20 lg:pb-28">
         <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
           <ScrollReveal>
             <h2 className="font-serif text-[clamp(1.8rem,3vw,2.5rem)] text-foreground mb-4">
-              Ready to see if we&apos;re the right fit?
+              Want to learn more?
             </h2>
             <p className="text-[16px] text-muted mb-8 max-w-md mx-auto leading-relaxed">
-              No pressure. No pitch. Just a real conversation.
+              Book a free 30-minute call and we&apos;ll walk you through our services and experience.
             </p>
             <Link href="/book" className="bg-accent text-white text-[15px] font-semibold px-9 py-4 rounded-xl hover:bg-accent-hover hover:-translate-y-[2px] hover:shadow-lg transition-all duration-300 interactive-lift" style={{ opacity: 1 }}>
               Book a Free Intro Call

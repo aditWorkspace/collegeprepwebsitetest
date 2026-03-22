@@ -61,10 +61,10 @@ export default function LoadingScreen({
               className="flex flex-col items-center"
             >
               <h1
-                className="font-serif italic text-2xl tracking-tight mb-10"
+                className="text-2xl font-serif tracking-tight mb-10 font-semibold"
                 style={{ color: "#1E2B45" }}
               >
-                Vergre
+                Verge
               </h1>
 
               <div

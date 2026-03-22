@@ -11,7 +11,7 @@ export default function HeroVisual() {
 
   return (
     <div className="relative hidden lg:block h-[560px]">
-      {/* Essay review card — main visual */}
+      {/* Essay review card */}
       <motion.div style={{ y: y1 }}>
         <InteractiveImage
           className="absolute top-[20px] left-0 w-[340px] bg-card rounded-xl ambient-shadow-lg z-10 overflow-hidden cursor-pointer border border-border"
@@ -25,7 +25,7 @@ export default function HeroVisual() {
               <span className="w-[7px] h-[7px] rounded-full bg-green-300/80" />
             </div>
             <span className="text-[10px] text-muted font-medium ml-1.5 tracking-wide">
-              Personal Statement — Draft 3
+              Personal Statement, Draft 3
             </span>
           </div>
           <div className="px-5 py-4 space-y-2.5">
@@ -39,7 +39,7 @@ export default function HeroVisual() {
             </p>
             <p className="text-[12px] text-foreground/50 leading-[1.7]">
               The summer I spent cataloguing tide pool species wasn&apos;t just
-              fieldwork —{" "}
+              fieldwork,{" "}
               <span className="bg-highlight px-1 rounded-sm">
                 it was the first time I felt my curiosity could matter
               </span>
@@ -69,7 +69,7 @@ export default function HeroVisual() {
             </span>
           </div>
           <p className="text-[11px] text-white/85 leading-[1.6]">
-            &ldquo;Love this opening — let&apos;s connect the tide pool moment
+            &ldquo;Love this opening. Let&apos;s connect the tide pool moment
             back to your research. That&apos;s the thread that ties everything
             together.&rdquo;
           </p>
@@ -90,15 +90,15 @@ export default function HeroVisual() {
           <div className="space-y-2">
             <div className="flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-green-400" />
-              <p className="text-[11px] text-muted">Research paper — published in school journal</p>
+              <p className="text-[11px] text-muted">Student-run consulting org, 12 clients served</p>
             </div>
             <div className="flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-green-400" />
-              <p className="text-[11px] text-muted">Community tutoring org — 200+ students</p>
+              <p className="text-[11px] text-muted">Financial literacy nonprofit, 200+ students</p>
             </div>
             <div className="flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-yellow-400" />
-              <p className="text-[11px] text-muted">Personal blog — 15 articles live</p>
+              <p className="text-[11px] text-muted">Market research blog, 15 articles live</p>
             </div>
           </div>
         </InteractiveImage>

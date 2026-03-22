@@ -1,37 +1,37 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import ScrollReveal from "@/components/ScrollReveal";
 import InteractiveImage from "@/components/InteractiveImage";
 import { counselors } from "@/data/content";
 
 export const metadata: Metadata = {
-  title: "About | Vergre Consulting",
-  description: "Meet the founders behind Vergre Consulting.",
+  title: "About | Verge Consulting",
+  description: "Meet the founders behind Verge Consulting.",
 };
 
 export default function AboutPage() {
   return (
     <div className="pt-[64px]">
       {/* Header */}
-      <section className="py-20 lg:py-28 dot-grid-light">
+      <section className="py-16 lg:py-24 dot-grid-light">
         <div className="max-w-3xl mx-auto px-6 lg:px-8">
           <ScrollReveal>
             <p className="text-[12px] font-semibold tracking-[0.25em] uppercase text-accent-warm mb-5">
               /about
             </p>
             <h1 className="font-serif text-[clamp(2.5rem,5vw,4rem)] text-foreground leading-[1.08] tracking-tight mb-6">
-              The people behind <em className="text-accent">Vergre.</em>
+              The people behind <span className="text-accent font-semibold">Verge.</span>
             </h1>
             <p className="text-[17px] text-muted leading-[1.7] max-w-lg">
-              We&apos;re not a faceless agency. We&apos;re two people who went
-              through this process ourselves and built something better.
+              We&apos;re not a large agency with rotating staff. We&apos;re two people who went through this process ourselves, learned what actually works, and built Verge around that experience. Every student works directly with both of us throughout the entire process.
             </p>
           </ScrollReveal>
         </div>
       </section>
 
       {/* Founders */}
-      <section className="pb-20 lg:pb-24">
+      <section className="pb-16 lg:pb-20">
         <div className="max-w-6xl mx-auto px-6 lg:px-8 space-y-10">
           {counselors.map((c, i) => (
             <ScrollReveal key={c.id} delay={i * 0.1}>
@@ -42,19 +42,13 @@ export default function AboutPage() {
               >
                 <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-0">
                   {/* Photo column */}
-                  <div className="min-h-[240px] lg:min-h-[400px] relative overflow-hidden"
-                    style={{
-                      background: i === 0
-                        ? "linear-gradient(135deg, #2C3E50 0%, #34495E 50%, #2C3E50 100%)"
-                        : "linear-gradient(135deg, #5B2C6F 0%, #7D3C98 50%, #5B2C6F 100%)",
-                    }}
-                  >
-                    <div className="absolute inset-0 dot-grid-light opacity-15" />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <span className="text-white/20 font-serif text-[80px] font-bold">
-                        {c.name.split(" ").map((n) => n[0]).join("")}
-                      </span>
-                    </div>
+                  <div className="min-h-[240px] lg:min-h-[400px] relative overflow-hidden">
+                    <Image
+                      src={c.image!}
+                      alt={c.name}
+                      fill
+                      className="object-cover"
+                    />
                   </div>
 
                   {/* Content */}
@@ -111,18 +105,17 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="pb-24 lg:pb-32">
+      <section className="pb-20 lg:pb-28">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <ScrollReveal>
             <div className="bg-accent rounded-3xl px-8 py-14 lg:px-16 lg:py-16 text-center relative overflow-hidden">
               <div className="absolute inset-0 dot-grid-light opacity-10" />
-              <div className="absolute -top-12 -right-12 w-40 h-40 rounded-full bg-white/[0.03]" />
               <div className="relative z-10">
                 <h2 className="font-serif text-[clamp(1.8rem,3.5vw,2.5rem)] text-white mb-4">
-                  Want to get to know us better?
+                  Want to learn more about how we work?
                 </h2>
                 <p className="text-[16px] text-white/45 mb-8 max-w-md mx-auto leading-relaxed">
-                  The best way is a free intro call. 20 minutes, no commitment, and you&apos;ll know exactly what working with us looks like.
+                  The best way is a free 30-minute intro call. We&apos;ll walk you through our experience, learn about your situation, and help you figure out if we&apos;d be a good fit. You can also reach out with any questions beforehand.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
                   <Link
@@ -133,10 +126,10 @@ export default function AboutPage() {
                     Book an Intro Call
                   </Link>
                   <Link
-                    href="/testimonials"
+                    href="/contact"
                     className="border-2 border-white/20 text-white text-[15px] font-semibold px-9 py-4 rounded-xl hover:bg-white/10 hover:border-white/30 transition-all duration-300"
                   >
-                    Read Testimonials
+                    Ask Us a Question
                   </Link>
                 </div>
               </div>

@@ -4,7 +4,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import InteractiveImage from "@/components/InteractiveImage";
 
 export const metadata: Metadata = {
-  title: "How It Works | Vergre Consulting",
+  title: "How It Works | Verge Consulting",
   description: "Our three-step process: Understand, Build, Refine.",
 };
 
@@ -13,7 +13,7 @@ const phases = [
     num: "01",
     title: "Understand",
     icon: "psychology",
-    description: "We start by getting to know you — your interests, your strengths, what you actually care about. Not your resume, not your stats. We figure out what makes you interesting and where the real story is.",
+    description: "We start by getting to know you: your interests, your strengths, what you actually care about. Not your resume, not your stats. We figure out what makes you interesting and where the real story is.",
     details: ["Deep-dive conversation about who you are", "Interests and strengths mapping", "Identify what's missing from your profile", "Initial strategy for what to build"],
     imageLabel: "Discovery session",
   },
@@ -21,15 +21,15 @@ const phases = [
     num: "02",
     title: "Build",
     icon: "rocket_launch",
-    description: "This is what makes us different. We don't just advise — we help you actually create projects, initiatives, and experiences that strengthen your profile. Things that are genuinely yours, not manufactured for an application.",
-    details: ["Project ideation and development", "Initiative launch support", "Experience building guidance", "Activities list development"],
+    description: "This is the step that sets us apart. Rather than just advising you on what to do, we work alongside you to develop real projects and initiatives that strengthen your profile. This could mean launching a business initiative, starting a nonprofit, building a meaningful leadership role, or developing a research project. The goal is always genuine substance, activities that are authentically yours, not manufactured for an application.",
+    details: ["Project ideation and hands-on development", "Initiative launch and growth support", "Meaningful experience building", "Activities list strategy and positioning"],
     imageLabel: "Project development",
   },
   {
     num: "03",
     title: "Refine",
     icon: "edit_note",
-    description: "Once your profile is real, we shape how you present it. Essays, activities list, narrative — everything gets refined until your application tells a coherent, authentic story. Both founders review everything before submission.",
+    description: "Once your profile is real, we shape how you present it. Essays, activities list, narrative. Everything gets refined until your application tells a coherent, authentic story. Both founders review everything before submission.",
     details: ["Essay writing and revision", "Narrative arc development", "Activities and honors positioning", "Final review by both founders"],
     imageLabel: "Essay review",
   },
@@ -38,15 +38,15 @@ const phases = [
 export default function HowItWorksPage() {
   return (
     <div className="pt-[64px]">
-      <section className="py-20 lg:py-28 dot-grid-light">
+      <section className="py-16 lg:py-24 dot-grid-light">
         <div className="max-w-3xl mx-auto px-6 lg:px-8">
           <ScrollReveal>
             <p className="text-[12px] font-semibold tracking-[0.25em] uppercase text-accent-warm mb-5">/process</p>
             <h1 className="font-serif text-[clamp(2.5rem,5vw,4rem)] text-foreground leading-[1.08] tracking-tight mb-6">
-              Understand. Build. <em className="text-accent">Refine.</em>
+              Understand. Build. <span className="text-accent font-semibold">Refine.</span>
             </h1>
             <p className="text-[17px] text-muted leading-[1.7] max-w-lg">
-              We don&apos;t just help you write about your experiences — we help
+              We don&apos;t just help you write about your experiences. We help
               you create them. Then we make sure your application tells the
               full story.
             </p>
@@ -54,7 +54,7 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
-      <section className="pb-20 lg:pb-28">
+      <section className="pb-16 lg:pb-24">
         <div className="max-w-6xl mx-auto px-6 lg:px-8 space-y-8">
           {phases.map((phase, i) => (
             <ScrollReveal key={phase.num} delay={i * 0.1}>
@@ -108,7 +108,7 @@ export default function HowItWorksPage() {
       </section>
 
       {/* Both founders */}
-      <section className="py-20 lg:py-28 bg-card border-y border-border">
+      <section className="py-16 lg:py-24 bg-card border-y border-border">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <ScrollReveal>
             <div className="bg-accent rounded-3xl p-8 lg:p-12 relative overflow-hidden">
@@ -121,8 +121,8 @@ export default function HowItWorksPage() {
                 <div>
                   <h2 className="font-serif text-[clamp(1.5rem,3vw,2rem)] text-white mb-4">You work with both of us.</h2>
                   <div className="space-y-4 text-[15px] text-white/60 leading-[1.7]">
-                    <p>Every student works directly with <strong className="text-white font-semibold">Adit and Aum</strong> — not interns, not junior staff, not someone we hired last month.</p>
-                    <p>Both of us stay involved throughout the entire process. Both of us <strong className="text-white font-semibold">review every essay before submission</strong>. Two perspectives, two sets of experience, one shared goal.</p>
+                    <p>Every student gets assigned a primary counselor, either <strong className="text-white font-semibold">Adit or Aum</strong>. But both of us stay involved throughout the entire process, not interns, not junior staff, not someone we hired last month.</p>
+                    <p>Both founders <strong className="text-white font-semibold">review every essay and every application before submission</strong>. You can also request to work with either of us on any specific area. Two perspectives, two sets of experience, one shared goal.</p>
                   </div>
                   <div className="flex items-center gap-4 mt-6 pt-5 border-t border-white/10">
                     <div className="flex -space-x-2">
@@ -142,7 +142,7 @@ export default function HowItWorksPage() {
       </section>
 
       {/* Good to know — enhanced */}
-      <section className="py-20 lg:py-28">
+      <section className="py-16 lg:py-24">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <ScrollReveal>
             <p className="text-[12px] font-semibold tracking-[0.25em] uppercase text-accent-warm mb-5 text-center">/details</p>
@@ -173,7 +173,7 @@ export default function HowItWorksPage() {
       </section>
 
       {/* CTA */}
-      <section className="pb-24 lg:pb-32">
+      <section className="pb-20 lg:pb-28">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <ScrollReveal>
             <div className="bg-accent rounded-3xl px-8 py-14 lg:px-16 lg:py-16 text-center relative overflow-hidden">

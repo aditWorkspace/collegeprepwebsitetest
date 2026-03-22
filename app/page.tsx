@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { counselors, testimonials } from "@/data/content";
 import ScrollReveal from "@/components/ScrollReveal";
 import HeroVisual from "@/components/HeroVisual";
@@ -9,24 +10,23 @@ export default function Home() {
   return (
     <>
       {/* ===== HERO ===== */}
-      <section className="relative min-h-screen flex items-center pt-[60px] dot-grid-light">
+      <section className="relative min-h-[90vh] flex items-center pt-[60px] dot-grid-light">
         <div className="max-w-6xl mx-auto px-6 lg:px-8 w-full py-16 lg:py-0 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left: copy */}
           <div className="flex flex-col gap-6 max-w-xl">
-            <p className="text-[12px] font-semibold tracking-[0.25em] uppercase text-accent-warm">
+            <p className="text-[12px] font-semibold tracking-[0.25em] uppercase text-accent-warm mb-1">
               College Profile Building
             </p>
 
-            <h1 className="font-serif text-[clamp(2.8rem,6vw,4.5rem)] leading-[1.05] tracking-tight text-foreground text-balance">
-              We don&apos;t just edit essays.
+            <h1 className="font-serif text-[clamp(2.8rem,6vw,4.5rem)] leading-[1.05] tracking-tight text-foreground text-balance mt-1">
+              We help students build profiles.
               <br />
-              <em className="text-accent">We build profiles.</em>
             </h1>
 
             <p className="text-[17px] lg:text-[18px] text-muted leading-[1.7] max-w-md">
-              Most counselors polish what you already have. We help you build
-              the projects, experiences, and narrative that make your application
-              genuinely stand out.
+Most counseling services edit essays and build school lists, we help students build real projects, strengthen their profile, and create a clear, cohesive narrative across their entire application.            </p>
+            <p className="text-[15px] text-muted leading-[1.7] max-w-md">
+              Both founders work directly with every student, and we keep our roster to fewer than ten students each cycle so we can give each one the attention they need.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 mt-2">
@@ -48,19 +48,25 @@ export default function Home() {
             {/* Founders */}
             <div className="flex items-center gap-4 mt-4 pt-6 border-t border-border">
               <div className="flex -space-x-2">
-                {["AM", "AN"].map((initials, i) => (
+                {counselors.map((c, i) => (
                   <div
                     key={i}
-                    className="w-10 h-10 rounded-full border-2 border-background bg-accent text-white flex items-center justify-center text-[11px] font-semibold"
+                    className="w-10 h-10 rounded-full border-2 border-background overflow-hidden"
                   >
-                    {initials}
+                    <Image
+                      src={c.image!}
+                      alt={c.name}
+                      width={80}
+                      height={80}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 ))}
               </div>
               <p className="text-[14px] text-muted leading-snug">
                 Founded by students from{" "}
                 <span className="font-semibold text-foreground">
-                  UC Berkeley
+                  UC Berkeley Haas + CS
                 </span>{" "}
                 &amp;{" "}
                 <span className="font-semibold text-foreground">
@@ -76,12 +82,12 @@ export default function Home() {
       </section>
 
       {/* ===== IMAGE CAROUSEL ===== */}
-      <section className="overflow-hidden bg-card/60 border-y border-border/40 py-5">
+      <section className="bg-card/60 border-y border-border/40 mt-4">
         <ImageCarousel />
       </section>
 
       {/* ===== WHY PREVIEW ===== */}
-      <section className="py-20 lg:py-28 dot-grid-light">
+      <section className="py-16 lg:py-24 dot-grid-light">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center">
             <ScrollReveal>
@@ -90,17 +96,16 @@ export default function Home() {
               </p>
               <h2 className="font-serif text-[clamp(2.2rem,4.5vw,3.5rem)] text-foreground leading-[1.08] mb-6">
                 We were in your position{" "}
-                <em className="text-accent">not that long ago.</em>
+                <span className="text-accent font-semibold">not that long ago.</span>
               </h2>
               <p className="text-[17px] text-muted leading-[1.7] mb-4">
-                Most of the help we got didn&apos;t feel that helpful. Same story
-                structures, same strategies, same way of &quot;packaging&quot; people.{" "}
-                <strong className="text-foreground">
-                  So we did it our own way — and it worked.
-                </strong>
+                Most of the help we got felt generic. Same story structures, same strategies, same way of &quot;packaging&quot; people. We stopped relying on that and did it our own way, focusing on projects and interests we genuinely cared about, with a story that didn&apos;t feel forced. That approach worked, and it&apos;s what we bring to every student we work with.
               </p>
-              <p className="text-[15px] text-muted leading-[1.7] mb-8">
-                We&apos;re happy to connect you with previous families we&apos;ve worked with — just ask during your intro call.
+              <p className="text-[15px] text-muted leading-[1.7] mb-4">
+                We&apos;ve seen firsthand how much of a difference it makes when someone helps you build real substance for your application rather than just polishing what you already have. For example, one student we worked with was interested in environmental science but had no standout activities in that area. We helped her launch a water quality testing initiative in her community. It started as an idea in our first conversation and became a central part of her application.
+              </p>
+              <p className="text-[14px] text-muted leading-[1.7] mb-8">
+                We&apos;re happy to connect you with previous families we&apos;ve worked with. Just ask during your intro call and we&apos;ll set up a private conversation.
               </p>
               <Link
                 href="/why-us"
@@ -129,7 +134,7 @@ export default function Home() {
                     Generic Counseling
                   </p>
                   <p className="text-[14px] text-muted leading-relaxed">
-                    Recycled advice, template essays, no real profile development. One-size-fits-all strategies.
+                    Large services typically assign you to a junior counselor, use template strategies, and focus almost entirely on essay editing. The advice tends to be the same regardless of who you are.
                   </p>
                 </InteractiveImage>
 
@@ -154,8 +159,7 @@ export default function Home() {
                     Our Approach
                   </p>
                   <p className="text-[14px] text-white/60 leading-relaxed">
-                    Build real projects, shape your narrative, work directly with
-                    both founders. Personalized to you.
+                    We work directly with every student, no junior staff, no hand-offs. We help you build real projects, develop your narrative, and present a profile that&apos;s genuinely yours.
                   </p>
                 </InteractiveImage>
               </div>
@@ -165,95 +169,83 @@ export default function Home() {
       </section>
 
       {/* ===== ABOUT PREVIEW ===== */}
-      <section className="py-20 lg:py-28 bg-card border-y border-border">
+      <section className="py-16 lg:py-24 bg-card border-y border-border">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <ScrollReveal>
-            <p className="text-[12px] font-semibold tracking-[0.25em] uppercase text-accent-warm mb-5">
-              /about
-            </p>
-            <h2 className="font-serif text-[clamp(2.2rem,4.5vw,3.5rem)] text-foreground leading-[1.08] mb-4">
-              Two counselors. <em className="text-accent">Real experience.</em>
-            </h2>
-            <p className="text-[16px] text-muted leading-[1.7] mb-12 max-w-lg">
-              Not a faceless agency. Two people who went through this process themselves and built something better.
-            </p>
-          </ScrollReveal>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+            <ScrollReveal>
+              <p className="text-[12px] font-semibold tracking-[0.25em] uppercase text-accent-warm mb-5">
+                /about
+              </p>
+              <h2 className="font-serif text-[clamp(2.2rem,4.5vw,3.5rem)] text-foreground leading-[1.08] mb-4">
+                Two counselors. <span className="text-accent font-semibold">Real experience.</span>
+              </h2>
+              <p className="text-[16px] text-muted leading-[1.7] mb-4">
+                We&apos;re not a large agency with rotating staff. We&apos;re two people who went through this process ourselves, learned what actually works, and built a service around that experience. Every student gets assigned a primary counselor, but both of us stay involved throughout the entire process and both review every application before submission.
+              </p>
+              <p className="text-[15px] text-muted leading-[1.7] mb-8">
+                You can also request to work with either of us on any specific area. We&apos;re flexible and want to make sure you get the best support possible.
+              </p>
+              <Link
+                href="/about"
+                className="inline-flex items-center gap-2 text-[15px] font-semibold text-accent group"
+              >
+                Full bios &amp; backgrounds
+                <span className="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">
+                  arrow_forward
+                </span>
+              </Link>
+            </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-            {counselors.map((c, i) => (
-              <ScrollReveal key={c.id} delay={i * 0.12}>
-                <InteractiveImage
-                  className="bg-background rounded-2xl border border-border p-8 cursor-pointer h-full"
-                  intensity={3}
-                  scale={1.015}
-                >
-                  <div className="flex items-start gap-5 mb-5">
-                    {/* Photo placeholder */}
-                    <div className="w-16 h-16 rounded-xl overflow-hidden flex-shrink-0"
-                      style={{
-                        background: i === 0
-                          ? "linear-gradient(135deg, #2C3E50, #34495E)"
-                          : "linear-gradient(135deg, #5B2C6F, #7D3C98)",
-                      }}
-                    >
-                      <div className="w-full h-full flex items-center justify-center">
-                        <span className="text-white text-[20px] font-serif font-semibold">
-                          {c.name.split(" ").map((n) => n[0]).join("")}
+            <ScrollReveal delay={0.15}>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                {counselors.map((c) => (
+                  <InteractiveImage
+                    key={c.id}
+                    className="bg-background rounded-2xl border border-border p-6 cursor-pointer"
+                    intensity={4}
+                    scale={1.02}
+                  >
+                    <div className="w-14 h-14 rounded-xl overflow-hidden mb-4">
+                      <Image
+                        src={c.image!}
+                        alt={c.name}
+                        width={112}
+                        height={112}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <h3 className="text-[16px] font-bold text-foreground mb-1">{c.name}</h3>
+                    <p className="text-[13px] text-accent-warm font-semibold mb-3">{c.school}</p>
+                    <div className="flex flex-wrap gap-1.5">
+                      {c.activities.slice(0, 3).map((a) => (
+                        <span
+                          key={a}
+                          className="text-[10px] font-semibold px-2.5 py-1 rounded-md bg-accent-light text-accent"
+                        >
+                          {a}
                         </span>
-                      </div>
+                      ))}
                     </div>
-                    <div>
-                      <h3 className="text-[18px] font-bold text-foreground">
-                        {c.name}
-                      </h3>
-                      <p className="text-[14px] text-muted">{c.title}</p>
-                      <p className="text-[13px] text-accent-warm mt-1 font-semibold">
-                        {c.school} · SAT {c.sat}
-                      </p>
-                    </div>
-                  </div>
-                  <p className="text-[14px] text-muted leading-[1.7] mb-5">{c.bio}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {c.activities.map((a) => (
-                      <span
-                        key={a}
-                        className="text-[11px] font-semibold px-3 py-1.5 rounded-lg bg-accent-light text-accent"
-                      >
-                        {a}
-                      </span>
-                    ))}
-                  </div>
-                </InteractiveImage>
-              </ScrollReveal>
-            ))}
+                  </InteractiveImage>
+                ))}
+              </div>
+            </ScrollReveal>
           </div>
-
-          <ScrollReveal delay={0.2}>
-            <Link
-              href="/about"
-              className="inline-flex items-center gap-2 text-[15px] font-semibold text-accent group"
-            >
-              Full bios &amp; backgrounds
-              <span className="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">
-                arrow_forward
-              </span>
-            </Link>
-          </ScrollReveal>
         </div>
       </section>
 
       {/* ===== PROCESS PREVIEW ===== */}
-      <section className="py-20 lg:py-28">
+      <section className="py-16 lg:py-24">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <ScrollReveal>
             <p className="text-[12px] font-semibold tracking-[0.25em] uppercase text-accent-warm mb-5">
               /process
             </p>
             <h2 className="font-serif text-[clamp(2.2rem,4.5vw,3.5rem)] text-foreground leading-[1.08] mb-4">
-              Understand. Build. <em className="text-accent">Refine.</em>
+              Understand. Build. <span className="text-accent font-semibold">Refine.</span>
             </h2>
             <p className="text-[16px] text-muted leading-[1.7] mb-12 max-w-lg">
-              A clear three-step framework that takes you from &quot;I have no idea what to do&quot; to a polished, authentic application.
+              Our process is designed to take you from &quot;I don&apos;t know where to start&quot; to a polished, authentic application. We work through three phases, each building on the last, so that by the time you submit, every part of your application tells a coherent story.
             </p>
           </ScrollReveal>
 
@@ -263,19 +255,19 @@ export default function Home() {
                 num: "01",
                 title: "Understand",
                 icon: "psychology",
-                desc: "We get to know you — your interests, your strengths, and what actually matters to you. Not your resume. You.",
+                desc: "We start by getting to know you deeply: your interests, strengths, and what genuinely excites you. This isn't a surface-level intake form. We have real conversations about who you are, what you care about, and where the gaps are in your current profile. You'll be assigned a primary counselor, but both founders are involved from day one.",
               },
               {
                 num: "02",
                 title: "Build",
                 icon: "rocket_launch",
-                desc: "We help you develop real projects and initiatives that fit who you are. Things that make your application genuine, not manufactured.",
+                desc: "This is the step most counselors skip. We help you create meaningful projects and experiences, whether that's a business initiative, a nonprofit organization, or something built around an interest you already have. The goal is genuine substance, not checkbox activities.",
               },
               {
                 num: "03",
                 title: "Refine",
                 icon: "edit_note",
-                desc: "We shape your narrative, write your essays, position your activities, and make sure every part of your application tells a coherent story.",
+                desc: "Once your profile has real depth, we shape how you present it. We craft your essays, position your activities list, and develop your narrative so every part of your application tells a coherent story. Both founders review everything before submission.",
               },
             ].map((step, i) => (
               <ScrollReveal key={step.num} delay={i * 0.1}>
@@ -318,7 +310,7 @@ export default function Home() {
       </section>
 
       {/* ===== TESTIMONIALS PREVIEW ===== */}
-      <section className="py-20 lg:py-28 bg-card border-y border-border">
+      <section className="py-16 lg:py-24 bg-card border-y border-border">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <ScrollReveal>
             <p className="text-[12px] font-semibold tracking-[0.25em] uppercase text-accent-warm mb-5">
@@ -326,10 +318,10 @@ export default function Home() {
             </p>
             <h2 className="font-serif text-[clamp(2.2rem,4.5vw,3.5rem)] text-foreground leading-[1.08] mb-4">
               From the students{" "}
-              <em className="text-accent">we&apos;ve worked with.</em>
+              <span className="text-accent font-semibold">we&apos;ve worked with.</span>
             </h2>
             <p className="text-[16px] text-muted leading-[1.7] mb-12 max-w-lg">
-              Don&apos;t take our word for it. And if you want to hear it firsthand, we&apos;re happy to connect you with any of our previous clients.
+              These are real experiences from families we&apos;ve worked with. If you want to hear it firsthand before making a decision, we&apos;re happy to connect you with any of our previous clients. Just ask during your intro call and we&apos;ll set up a private conversation.
             </p>
           </ScrollReveal>
 
@@ -355,7 +347,7 @@ export default function Home() {
                       </span>
                     ))}
                   </div>
-                  <p className="font-serif italic text-[18px] text-foreground leading-[1.6] mb-7">
+                  <p className="font-serif text-[18px] text-foreground leading-[1.6] mb-7">
                     &ldquo;{t.quote}&rdquo;
                   </p>
                   <div className="flex items-center justify-between pt-5 border-t border-border">
@@ -401,25 +393,21 @@ export default function Home() {
       </section>
 
       {/* ===== FINAL CTA ===== */}
-      <section className="py-20 lg:py-28">
+      <section className="py-16 lg:py-24">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <ScrollReveal>
-            <div className="bg-accent rounded-3xl px-8 py-16 lg:px-20 lg:py-20 relative overflow-hidden">
+            <div className="bg-accent rounded-3xl px-8 py-14 lg:px-20 lg:py-16 relative overflow-hidden">
               <div className="absolute inset-0 dot-grid-light opacity-10" />
-              {/* Decorative circles */}
-              <div className="absolute -top-20 -right-20 w-60 h-60 rounded-full bg-white/[0.03]" />
-              <div className="absolute -bottom-16 -left-16 w-48 h-48 rounded-full bg-white/[0.03]" />
               <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
                 <div>
                   <p className="text-[12px] font-semibold tracking-[0.25em] uppercase text-accent-warm mb-5">
                     Get started
                   </p>
                   <h2 className="font-serif text-[clamp(2.2rem,4.5vw,3.2rem)] text-white leading-[1.1] mb-5">
-                    Ready to build a profile that actually stands out?
+                    Want to learn more about what we do?
                   </h2>
                   <p className="text-[17px] text-white/50 leading-[1.7] mb-8">
-                    Book a free intro call. No pressure, no pitch — just a real
-                    conversation about where you are and how we can help. You&apos;ll leave with useful perspective either way.
+                    Book a free 30-minute intro call so we can learn about your situation, walk you through our services, and help you figure out if we&apos;d be a good fit. No commitment, and you&apos;ll walk away with useful perspective either way.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Link
@@ -430,10 +418,10 @@ export default function Home() {
                       Book a Free Intro Call
                     </Link>
                     <Link
-                      href="/services"
+                      href="/contact"
                       className="border-2 border-white/20 text-white text-[15px] font-semibold px-9 py-4 rounded-xl hover:bg-white/10 hover:border-white/30 transition-all duration-300 text-center"
                     >
-                      View Services
+                      Ask Us a Question
                     </Link>
                   </div>
                 </div>
@@ -442,20 +430,20 @@ export default function Home() {
                     <div className="bg-white/[0.06] rounded-2xl p-6 border border-white/[0.08]">
                       <div className="flex items-center gap-3 mb-3">
                         <span className="material-symbols-outlined text-[22px] text-accent-warm">schedule</span>
-                        <p className="text-[15px] font-semibold text-white">20-30 minute call</p>
+                        <p className="text-[15px] font-semibold text-white">30 minute call</p>
                       </div>
-                      <p className="text-[14px] text-white/40 leading-relaxed">A focused conversation, not a sales pitch. We&apos;ll talk about your goals, your profile, and what support would look like.</p>
+                      <p className="text-[14px] text-white/40 leading-relaxed">We&apos;ll learn about your background, walk you through how we work, and help you figure out if our approach is the right fit for your goals.</p>
                     </div>
                     <div className="grid grid-cols-2 gap-4">
                       <div className="bg-white/[0.06] rounded-2xl p-5 border border-white/[0.08]">
                         <span className="material-symbols-outlined text-[20px] text-accent-warm mb-2 block">psychology</span>
-                        <p className="text-[13px] font-semibold text-white mb-1">Honest feedback</p>
-                        <p className="text-[12px] text-white/35">Even if we&apos;re not the right fit.</p>
+                        <p className="text-[13px] font-semibold text-white mb-1">Straightforward</p>
+                        <p className="text-[12px] text-white/35">We&apos;ll be upfront about what we can and can&apos;t help with.</p>
                       </div>
                       <div className="bg-white/[0.06] rounded-2xl p-5 border border-white/[0.08]">
                         <span className="material-symbols-outlined text-[20px] text-accent-warm mb-2 block">handshake</span>
                         <p className="text-[13px] font-semibold text-white mb-1">Zero obligation</p>
-                        <p className="text-[12px] text-white/35">Walk away with real insight.</p>
+                        <p className="text-[12px] text-white/35">Walk away with real insight regardless.</p>
                       </div>
                     </div>
                   </div>

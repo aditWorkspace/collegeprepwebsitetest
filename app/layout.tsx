@@ -14,13 +14,13 @@ const playfair = Playfair_Display({
   variable: "--font-playfair",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  style: ["normal", "italic"],
+  style: ["normal"],
 });
 
 export const metadata: Metadata = {
-  title: "Vergre Consulting | College Profile Building",
+  title: "Verge Consulting | College Profile Building",
   description:
-    "We help students build real profiles and tell authentic stories. Not just essay editing — full candidate development.",
+    "Personalized college counseling focused on building real profiles and strong applications. We work directly with a small number of students each cycle.",
 };
 
 export default function RootLayout({

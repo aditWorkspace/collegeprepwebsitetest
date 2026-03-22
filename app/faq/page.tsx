@@ -5,19 +5,19 @@ import { faqs } from "@/data/content";
 import FaqAccordion from "@/components/FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "FAQ | Vergre Consulting",
+  title: "FAQ | Verge Consulting",
   description: "Frequently asked questions about our college counseling services.",
 };
 
 export default function FaqPage() {
   return (
     <div className="pt-[64px]">
-      <section className="py-20 lg:py-28 dot-grid-light">
+      <section className="py-16 lg:py-24 dot-grid-light">
         <div className="max-w-3xl mx-auto px-6 lg:px-8">
           <ScrollReveal>
             <p className="text-[12px] font-semibold tracking-[0.25em] uppercase text-accent-warm mb-5">/faq</p>
             <h1 className="font-serif text-[clamp(2.5rem,5vw,4rem)] text-foreground leading-[1.08] tracking-tight mb-6">
-              Common <em className="text-accent">questions.</em>
+              Common <span className="text-accent font-semibold">questions.</span>
             </h1>
             <p className="text-[17px] text-muted leading-[1.7] max-w-lg">
               If you don&apos;t see your question here,{" "}
@@ -28,7 +28,7 @@ export default function FaqPage() {
         </div>
       </section>
 
-      <section className="pb-24 lg:pb-32">
+      <section className="pb-20 lg:pb-28">
         <div className="max-w-3xl mx-auto px-6 lg:px-8">
           <FaqAccordion items={faqs} />
           <ScrollReveal delay={0.2}>

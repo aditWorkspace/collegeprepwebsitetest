@@ -4,23 +4,22 @@ import InteractiveImage from "@/components/InteractiveImage";
 import { CALENDLY_URL } from "@/data/content";
 
 export const metadata: Metadata = {
-  title: "Book a Call | Vergre Consulting",
+  title: "Book a Call | Verge Consulting",
   description: "Schedule a free intro call to discuss your college application goals.",
 };
 
 export default function BookPage() {
   return (
     <div className="pt-[64px]">
-      <section className="py-20 lg:py-28 dot-grid-light">
+      <section className="py-16 lg:py-24 dot-grid-light">
         <div className="max-w-3xl mx-auto px-6 lg:px-8">
           <ScrollReveal>
             <p className="text-[12px] font-semibold tracking-[0.25em] uppercase text-accent-warm mb-5">/book</p>
             <h1 className="font-serif text-[clamp(2.5rem,5vw,4rem)] text-foreground leading-[1.08] tracking-tight mb-6">
-              Let&apos;s have a <em className="text-accent">real conversation.</em>
+              Schedule a <span className="text-accent font-semibold">free intro call.</span>
             </h1>
             <p className="text-[17px] text-muted leading-[1.7] max-w-lg">
-              No pressure, no pitch. Just a conversation about where you are,
-              what you&apos;re working toward, and whether we&apos;re the right fit.
+              Pick a time that works for you and we&apos;ll hop on a 30-minute call. We&apos;ll walk you through our experience and services, learn about your situation, and help you figure out if we&apos;d be the right fit.
             </p>
           </ScrollReveal>
         </div>
@@ -48,16 +47,16 @@ export default function BookPage() {
         </div>
       </section>
 
-      <section className="pb-24 lg:pb-32">
+      <section className="pb-20 lg:pb-28">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <ScrollReveal>
             <h2 className="font-serif text-[clamp(1.8rem,3vw,2.5rem)] text-foreground mb-10 text-center">What to expect.</h2>
           </ScrollReveal>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
             {[
-              { icon: "schedule", title: "20-30 minutes", desc: "A focused conversation, not a marathon sales pitch." },
-              { icon: "psychology", title: "Honest perspective", desc: "You'll leave with useful insight, even if we don't work together." },
-              { icon: "handshake", title: "Zero pressure", desc: "We only take students we believe we can genuinely help." },
+              { icon: "schedule", title: "30 minutes", desc: "Enough time to walk through our services and learn about your situation." },
+              { icon: "psychology", title: "Useful perspective", desc: "You'll leave with a clear sense of what we do and whether it makes sense for you." },
+              { icon: "handshake", title: "No commitment", desc: "We only take students we believe we can genuinely help, and we'll be upfront about that." },
             ].map((item, i) => (
               <ScrollReveal key={item.title} delay={i * 0.08}>
                 <InteractiveImage className="bg-card border border-border rounded-2xl p-7 text-center cursor-pointer" intensity={4} scale={1.02}>

@@ -33,9 +33,9 @@ export default function Navigation() {
         {/* Logo */}
         <Link
           href="/"
-          className="font-serif italic text-[19px] text-accent tracking-tight select-none hover:opacity-70 transition-opacity font-semibold"
+          className="text-[20px] font-serif text-accent tracking-tight select-none hover:opacity-70 transition-opacity font-semibold"
         >
-          Vergre
+          Verge
         </Link>
 
         {/* Desktop links */}

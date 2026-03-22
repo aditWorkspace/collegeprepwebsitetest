@@ -4,58 +4,46 @@ import ScrollReveal from "@/components/ScrollReveal";
 import InteractiveImage from "@/components/InteractiveImage";
 
 export const metadata: Metadata = {
-  title: "Why Us | Vergre Consulting",
-  description: "Why we built Vergre — and why it's different from everything else out there.",
+  title: "Why Us | Verge Consulting",
+  description: "Why we built Verge and why it's different from everything else out there.",
 };
 
 export default function WhyUsPage() {
   return (
     <div className="pt-[64px]">
       {/* Header */}
-      <section className="py-20 lg:py-28 dot-grid-light">
+      <section className="py-16 lg:py-24 dot-grid-light">
         <div className="max-w-3xl mx-auto px-6 lg:px-8">
           <ScrollReveal>
             <p className="text-[12px] font-semibold tracking-[0.25em] uppercase text-accent-warm mb-5">
               /why us
             </p>
             <h1 className="font-serif text-[clamp(2.5rem,5vw,4rem)] text-foreground leading-[1.08] tracking-tight mb-8">
-              Why we built <em className="text-accent">Vergre.</em>
+              Why we built <span className="text-accent font-semibold">Verge.</span>
             </h1>
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
             <div className="space-y-6 text-[17px] text-muted leading-[1.75]">
-              <p>
-                We were in your position not that long ago, trying to figure out
-                how this whole process actually works. And honestly, most of the
-                help we got didn&apos;t feel that helpful. A lot of counselors charge
-                a ton of money, but the advice felt recycled. Same story
-                structures, same strategies, same way of &quot;packaging&quot; people, even
-                when it didn&apos;t really fit who we were.
-              </p>
-              <p>
-                So we stopped relying on that and did it our own way. We focused
-                on things that actually made sense for us. Projects we genuinely
-                cared about, interests we could speak on naturally, and a story
-                that didn&apos;t feel forced, and that approach ended up working.
-              </p>
-              <p>
-                That&apos;s what we bring here. We&apos;re not trying to run this at scale
-                or push a one size fits all playbook. We work with a small number
-                of students and actually get to know you. Then we help shape your
-                application around what&apos;s real, whether that&apos;s your narrative,
-                your activities, or even building out projects that actually fit
-                you. Not just what looks impressive, but what actually makes sense
-                when someone reads your application. We created Vergre to make sure
-                students aren&apos;t being misinformed and misled just like we were.
-              </p>
-            </div>
+  <p>
+    We built Verge because we were in the exact same position not too long ago, trying to understand a process that felt unclear and overly scripted. Most of the guidance we came across sounded polished, but it all felt the same. The same story frameworks, the same advice on how to present yourself, the same idea that there was a “right” way to package who you are.
+  </p>
+  <p>
+    It didn’t sit right with us. So we stepped away from that approach and focused on what actually made sense. We spent our time building projects we genuinely cared about, exploring interests we could speak about honestly, and shaping a narrative that reflected who we were instead of what we thought admissions wanted to hear. And that ended up working.
+  </p>
+  <p>
+    That experience is the foundation of Verge. We don’t believe in scaling this into a one size fits all system or pushing students into generic molds. We work with a very small group of students so we can actually understand who you are, what you care about, and where you want to go. From there, we help you build an application that is grounded in something real, whether that means refining your narrative, strengthening your activities, or even helping you create projects that genuinely align with your interests.
+  </p>
+  <p>
+    The goal isn’t to make you look impressive on paper. It’s to make your application make sense. Because when it does, it stands out naturally.
+  </p>
+</div>
           </ScrollReveal>
         </div>
       </section>
 
       {/* What we actually do */}
-      <section className="py-20 lg:py-28 bg-card border-y border-border">
+      <section className="py-16 lg:py-24 bg-card border-y border-border">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <ScrollReveal>
             <h2 className="font-serif text-[clamp(2rem,4vw,2.8rem)] text-foreground leading-tight mb-12">
@@ -67,7 +55,7 @@ export default function WhyUsPage() {
               {
                 icon: "rocket_launch",
                 title: "We build, not just advise.",
-                body: "Most counselors help you write about what you've already done. We help you actually do things — launch projects, start initiatives, develop experiences that make your application real.",
+                body: "Most counselors help you write about what you've already done. We help you actually do things. Launch projects, start initiatives, develop experiences that make your application real.",
               },
               {
                 icon: "group",
@@ -77,7 +65,7 @@ export default function WhyUsPage() {
               {
                 icon: "visibility",
                 title: "We keep it small on purpose.",
-                body: "We work with a limited number of students each cycle. That's not a marketing line — it's how we make sure every student gets real attention, not recycled advice.",
+                body: "We work with a limited number of students each cycle. That's not a marketing line. It's how we make sure every student gets real attention, not recycled advice.",
               },
               {
                 icon: "fingerprint",
@@ -108,7 +96,7 @@ export default function WhyUsPage() {
       </section>
 
       {/* Talk to previous clients */}
-      <section className="py-16 lg:py-20">
+      <section className="py-14 lg:py-16">
         <div className="max-w-3xl mx-auto px-6 lg:px-8">
           <ScrollReveal>
             <InteractiveImage
@@ -123,7 +111,7 @@ export default function WhyUsPage() {
                 <div>
                   <h3 className="text-[18px] font-bold text-foreground mb-2">Talk to our previous clients.</h3>
                   <p className="text-[16px] text-muted leading-[1.7]">
-                    We&apos;re proud of the work we&apos;ve done and the relationships we&apos;ve built. If you want to hear from families we&apos;ve worked with before making a decision, just ask — we&apos;re happy to set up a private conversation so you can hear how it went, directly from them.
+                    We&apos;re proud of the work we&apos;ve done and the relationships we&apos;ve built. If you want to hear from families we&apos;ve worked with before making a decision, just ask. We&apos;re happy to set up a private conversation so you can hear how it went, directly from them.
                   </p>
                 </div>
               </div>
@@ -133,7 +121,7 @@ export default function WhyUsPage() {
       </section>
 
       {/* CTA */}
-      <section className="pb-24 lg:pb-32">
+      <section className="pb-20 lg:pb-28">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <ScrollReveal>
             <div className="bg-accent rounded-3xl px-8 py-14 lg:px-16 lg:py-16 text-center relative overflow-hidden">
@@ -142,10 +130,10 @@ export default function WhyUsPage() {
               <div className="absolute -bottom-8 -left-8 w-32 h-32 rounded-full bg-white/[0.03]" />
               <div className="relative z-10">
                 <h2 className="font-serif text-[clamp(1.8rem,3.5vw,2.5rem)] text-white mb-4">
-                  Curious if we&apos;re the right fit?
+                  Want to learn more?
                 </h2>
                 <p className="text-[16px] text-white/45 mb-8 max-w-md mx-auto leading-relaxed">
-                  A 20-minute call is all it takes to find out. No commitment, no pressure — just an honest conversation.
+                  Book a free 30-minute call and we&apos;ll walk you through our experience and services. No commitment, no pressure.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
                   <Link

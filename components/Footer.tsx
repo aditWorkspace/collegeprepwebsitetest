@@ -10,9 +10,9 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <Link
               href="/"
-              className="font-serif italic text-[22px] tracking-tight hover:opacity-80 transition-opacity block mb-5 font-semibold"
+              className="text-[22px] font-serif tracking-tight hover:opacity-80 transition-opacity block mb-5 font-semibold"
             >
-              Vergre
+              Verge
             </Link>
             <p className="text-[14px] text-white/40 leading-[1.7] max-w-[280px]">
               Personalized college counseling focused on building real profiles,
@@ -89,7 +89,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="border-t border-white/8 pt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <p className="text-[12px] text-white/25">
-            &copy; {new Date().getFullYear()} Vergre Consulting. All rights
+            &copy; {new Date().getFullYear()} Verge Consulting. All rights
             reserved.
           </p>
           <div className="flex items-center gap-6">

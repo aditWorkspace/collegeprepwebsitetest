@@ -3,7 +3,7 @@
 import { useRef, useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 
-const SCROLL_SPEED = 0.4;
+const SCROLL_SPEED = 0.46;
 const IMAGE_WIDTH = 340;
 const IMAGE_HEIGHT = 200;
 const IMAGE_GAP = 14;
