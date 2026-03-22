@@ -29,7 +29,7 @@ export const counselors = [
     sat: "1580",
     admittedTo: ["UC Berkeley", "Carnegie Mellon", "UT Austin", "UC San Diego", "UC Davis", "UC Irvine"],
     activities: ["Entrepreneurship", "DECA", "Robotics"],
-    bio: "Adit built his college profile around entrepreneurship, competitive business, and robotics — not by following a formula, but by pursuing things he genuinely cared about. He brings that same approach to every student he works with.",
+    bio: "Adit works with students on finding the right projects and experiences to pursue, then helps them build a narrative that connects everything. His approach is hands-on — he stays involved from profile strategy through final essay review.",
     linkedin: "https://www.linkedin.com/in/adit-mittal14/",
   },
   {
@@ -41,7 +41,7 @@ export const counselors = [
     sat: "1560",
     admittedTo: ["NYU Stern (ED)"],
     activities: ["DECA", "FundFacts", "Robotics World Championship", "Political Campaign Work"],
-    bio: "Aum's profile spanned business, tech, and civic engagement — from building FundFacts to competing at the robotics world championship to working on a political campaign. He knows what it takes to build a profile that's genuinely distinctive.",
+    bio: "Aum helps students figure out what makes them genuinely distinctive and then build on it. From project development to essay writing, he brings a sharp eye for what admissions officers are actually looking for.",
     linkedin: "https://www.linkedin.com/in/aum-narkar-912017217/",
   },
 ];

@@ -1,37 +1,37 @@
 "use client";
 
 import { useRef, useState, useEffect, useCallback } from "react";
-import { motion } from "framer-motion";
+import Image from "next/image";
 
-const SCROLL_SPEED = 0.5; // px per frame
-const IMAGE_WIDTH = 320;
-const IMAGE_GAP = 16;
+const SCROLL_SPEED = 0.4;
+const IMAGE_WIDTH = 340;
+const IMAGE_HEIGHT = 200;
+const IMAGE_GAP = 14;
 
-// Placeholder school images — replace src values with real photos
 const carouselImages = [
-  { src: "/carousel/school-1.jpg", alt: "Campus architecture" },
-  { src: "/carousel/school-2.jpg", alt: "University quad" },
-  { src: "/carousel/school-3.jpg", alt: "Library interior" },
-  { src: "/carousel/school-4.jpg", alt: "College campus" },
-  { src: "/carousel/school-5.jpg", alt: "Student life" },
-  { src: "/carousel/school-6.jpg", alt: "Graduation ceremony" },
-  { src: "/carousel/school-7.jpg", alt: "Campus at sunset" },
-  { src: "/carousel/school-8.jpg", alt: "Research lab" },
+  { src: "/carousel/berkeleycampus.jpg", alt: "UC Berkeley" },
+  { src: "/carousel/stanfordcampus.webp", alt: "Stanford" },
+  { src: "/carousel/nyusterncampus.jpg", alt: "NYU Stern" },
+  { src: "/carousel/uchicagocampus.webp", alt: "UChicago" },
+  { src: "/carousel/dukecampus.webp", alt: "Duke" },
+  { src: "/carousel/uclacampus.webp", alt: "UCLA" },
+  { src: "/carousel/whartoncampus.jpeg", alt: "Wharton" },
+  { src: "/carousel/utaustincampus.avif", alt: "UT Austin" },
 ];
 
 export default function ImageCarousel() {
   const trackRef = useRef<HTMLDivElement>(null);
   const animRef = useRef<number>(0);
   const offsetRef = useRef(0);
-  const [paused, setPaused] = useState(false);
+  const pausedRef = useRef(false);
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
 
-  // Triple the images for seamless looping
+  // Triple for seamless loop
   const images = [...carouselImages, ...carouselImages, ...carouselImages];
   const singleSetWidth = carouselImages.length * (IMAGE_WIDTH + IMAGE_GAP);
 
   const animate = useCallback(() => {
-    if (!paused && trackRef.current) {
+    if (!pausedRef.current && trackRef.current) {
       offsetRef.current -= SCROLL_SPEED;
       if (Math.abs(offsetRef.current) >= singleSetWidth) {
         offsetRef.current += singleSetWidth;
@@ -39,7 +39,7 @@ export default function ImageCarousel() {
       trackRef.current.style.transform = `translateX(${offsetRef.current}px)`;
     }
     animRef.current = requestAnimationFrame(animate);
-  }, [paused, singleSetWidth]);
+  }, [singleSetWidth]);
 
   useEffect(() => {
     animRef.current = requestAnimationFrame(animate);
@@ -47,7 +47,7 @@ export default function ImageCarousel() {
   }, [animate]);
 
   return (
-    <div className="w-full overflow-hidden py-2">
+    <div className="w-full overflow-hidden py-6">
       <div
         ref={trackRef}
         className="flex"
@@ -56,41 +56,54 @@ export default function ImageCarousel() {
         {images.map((img, i) => {
           const isHovered = hoveredIdx === i;
           return (
-            <motion.div
+            <div
               key={i}
-              className="flex-shrink-0 rounded-2xl overflow-hidden relative cursor-pointer"
-              style={{ width: IMAGE_WIDTH, height: 200 }}
+              className="flex-shrink-0 rounded-xl overflow-hidden relative cursor-pointer"
+              style={{
+                width: IMAGE_WIDTH,
+                height: IMAGE_HEIGHT,
+                transform: isHovered ? "scale(1.15)" : "scale(1)",
+                zIndex: isHovered ? 10 : 1,
+                transition: "transform 0.35s cubic-bezier(0.22, 1, 0.36, 1)",
+              }}
               onMouseEnter={() => {
-                setPaused(true);
+                pausedRef.current = true;
                 setHoveredIdx(i);
               }}
               onMouseLeave={() => {
-                setPaused(false);
+                pausedRef.current = false;
                 setHoveredIdx(null);
               }}
-              animate={{
-                scale: isHovered ? 1.06 : 1,
-                filter: isHovered ? "brightness(1)" : "brightness(0.85)",
-              }}
-              transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
             >
-              {/* Placeholder gradient — replace with <Image> when you add real photos */}
-              <div
+              <Image
+                src={img.src}
+                alt={img.alt}
+                width={IMAGE_WIDTH * 2}
+                height={IMAGE_HEIGHT * 2}
                 className="w-full h-full"
                 style={{
-                  background: `linear-gradient(${135 + (i % carouselImages.length) * 25}deg,
-                    ${["#2C3E50", "#34495E", "#5B2C6F", "#1A2340", "#2d4b43", "#462721", "#1e3a5f", "#3d1f56"][i % carouselImages.length]},
-                    ${["#4A6741", "#5D7B6F", "#9B59B6", "#2C3A5C", "#4a7c6c", "#8B4513", "#2980B9", "#6C3483"][i % carouselImages.length]})`,
+                  objectFit: "cover",
+                  objectPosition: "center",
+                  filter: isHovered ? "brightness(1)" : "brightness(0.8)",
+                  transition: "filter 0.35s cubic-bezier(0.22, 1, 0.36, 1)",
+                }}
+                draggable={false}
+              />
+              {/* School label on hover */}
+              <div
+                className="absolute inset-x-0 bottom-0 flex items-end justify-center pb-4"
+                style={{
+                  height: "55%",
+                  background: "linear-gradient(to top, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.15) 60%, transparent 100%)",
+                  opacity: isHovered ? 1 : 0,
+                  transition: "opacity 0.3s ease",
                 }}
               >
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center">
-                    <span className="material-symbols-outlined text-white/20 text-[40px] block mb-2">school</span>
-                    <p className="text-white/30 text-[11px] font-medium tracking-wide">{img.alt}</p>
-                  </div>
-                </div>
+                <p className="text-white text-[14px] font-bold tracking-wide">
+                  {img.alt}
+                </p>
               </div>
-            </motion.div>
+            </div>
           );
         })}
       </div>

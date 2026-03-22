@@ -76,7 +76,7 @@ export default function Home() {
       </section>
 
       {/* ===== IMAGE CAROUSEL ===== */}
-      <section className="py-4 lg:py-6 overflow-hidden border-y border-border/50 bg-card/50">
+      <section className="overflow-hidden bg-card/60 border-y border-border/40 py-5">
         <ImageCarousel />
       </section>
 

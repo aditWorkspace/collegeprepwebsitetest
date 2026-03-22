@@ -15,8 +15,8 @@ export default function Footer() {
               Vergre
             </Link>
             <p className="text-[14px] text-white/40 leading-[1.7] max-w-[280px]">
-              We help students build real profiles and tell authentic stories.
-              Not just advising — actual candidate development.
+              Personalized college counseling focused on building real profiles,
+              not just polishing applications.
             </p>
           </div>
 

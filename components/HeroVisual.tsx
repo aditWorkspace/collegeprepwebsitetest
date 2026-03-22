@@ -69,8 +69,9 @@ export default function HeroVisual() {
             </span>
           </div>
           <p className="text-[11px] text-white/85 leading-[1.6]">
-            &ldquo;Strong opening. Link the tide pool moment directly to your
-            research interest.&rdquo;
+            &ldquo;Love this opening — let&apos;s connect the tide pool moment
+            back to your research. That&apos;s the thread that ties everything
+            together.&rdquo;
           </p>
         </InteractiveImage>
       </motion.div>
@@ -89,15 +90,15 @@ export default function HeroVisual() {
           <div className="space-y-2">
             <div className="flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-green-400" />
-              <p className="text-[11px] text-muted">Research initiative — launched</p>
+              <p className="text-[11px] text-muted">Research paper — published in school journal</p>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-green-400" />
+              <p className="text-[11px] text-muted">Community tutoring org — 200+ students</p>
             </div>
             <div className="flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-yellow-400" />
-              <p className="text-[11px] text-muted">Nonprofit project — in progress</p>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-border" />
-              <p className="text-[11px] text-muted">Blog/publication — planned</p>
+              <p className="text-[11px] text-muted">Personal blog — 15 articles live</p>
             </div>
           </div>
         </InteractiveImage>
@@ -123,7 +124,8 @@ export default function HeroVisual() {
             </span>
           </div>
           <p className="text-[11px] text-white/85 leading-[1.6]">
-            &ldquo;The project angle is great. Let&apos;s make sure the activities list reflects this too.&rdquo;
+            &ldquo;This works really well. Let&apos;s make sure your activities
+            list tells the same story.&rdquo;
           </p>
         </InteractiveImage>
       </motion.div>
