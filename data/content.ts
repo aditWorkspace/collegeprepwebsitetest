@@ -137,7 +137,7 @@ export const faqs = [
   },
   {
     question: "What do you mean by 'profile-building'?",
-    answer: "It means we don't just help you write about your activities. We help you create them. Whether that's launching a project, starting an initiative, or deepening your involvement in something you care about, we help you build the substance behind your application.",
+    answer: "We work alongside you to build the substance behind your application. Whether that's launching a project, starting an initiative, or deepening your involvement in something you already care about, we're in it with you from the ground up.",
   },
   {
     question: "How many students do you work with?",
@@ -157,7 +157,15 @@ export const faqs = [
   },
   {
     question: "What does 'full access to both founders' mean?",
-    answer: "It means you're working directly with Adit and Aum, not interns, not junior staff. You'll be assigned one of us as your primary counselor, but both of us stay involved with every student. Both founders review every essay and every application before submission. You can also request to work with either of us on any specific area.",
+    answer: "You're working directly with Adit and Aum. You'll have one of us as your primary point of contact, but both founders read every version of every essay and leave comments along the way. If you ever want a second opinion or want to talk through feedback, you can schedule a call with either of us at any time. The process is built to be flexible around what you actually need.",
+  },
+  {
+    question: "What does a typical engagement look like?",
+    answer: "It depends on where you are in the process. For students we work with earlier, we spend time building out the substance of your application before you ever write a word — developing projects, shaping your narrative, and figuring out what story your activities are actually telling. For students closer to senior year, the focus shifts to translating everything you've built into an application that feels cohesive and genuinely reflects who you are.",
+  },
+  {
+    question: "My student already has a counselor at school — can Verge still help?",
+    answer: "Yes, and honestly this is a pretty common situation. School counselors do important work, but they're often managing hundreds of students at a time, which makes the kind of deep, individualized focus we offer difficult for them to provide. Verge works alongside whatever support your student already has. We're not here to replace anyone — we just fill the gap that tends to matter most, making sure the story your student has spent years building actually comes through in their application.",
   },
 ];
 
