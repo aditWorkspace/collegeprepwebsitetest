@@ -5,7 +5,7 @@ import { faqs } from "@/data/content";
 import FaqAccordion from "@/components/FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "FAQ | Verge Consulting",
+  title: "FAQ | Prospectus Consulting",
   description: "Frequently asked questions about our college counseling services.",
 };
 
