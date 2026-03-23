@@ -3,7 +3,7 @@
 // ============================================================
 
 // REPLACE: Add your real Calendly booking link
-export const CALENDLY_URL = "https://calendly.com/YOUR_LINK_HERE";
+export const CALENDLY_URL = "https://cal.com/aum-narkar-019/prospectus-intro-consultation";
 
 // ============================================================
 // NAVIGATION
