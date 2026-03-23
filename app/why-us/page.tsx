@@ -26,16 +26,16 @@ export default function WhyUsPage() {
           <ScrollReveal delay={0.1}>
             <div className="space-y-6 text-[17px] text-muted leading-[1.75]">
   <p>
-    We built Verge because we were in the exact same position not too long ago, trying to understand a process that felt unclear and overly scripted. Most of the guidance we came across sounded polished, but it all felt the same. The same story frameworks, the same advice on how to present yourself, the same idea that there was a “right” way to package who you are.
+    We built Verge because we were in the exact same position not too long ago. We had both put in the work, built things we cared about, and arrived at senior year with a genuine story to tell. What we were looking for was someone who could actually help us tell it.
   </p>
   <p>
-    It didn’t sit right with us. So we stepped away from that approach and focused on what actually made sense. We spent our time building projects we genuinely cared about, exploring interests we could speak about honestly, and shaping a narrative that reflected who we were instead of what we thought admissions wanted to hear. And that ended up working.
+    We worked with counselors, and in many ways they were helpful. But when it came to the final stretch, the process felt like it moved on autopilot. There were frameworks and templates, a sense that there was a right way to package who you are. What we found ourselves wanting was more space to actually reflect, to figure out what our work meant and how to speak about it honestly. That part of the process felt underdeveloped, and looking back, it was the most important part.
   </p>
   <p>
-    That experience is the foundation of Verge. We don’t believe in scaling this into a one size fits all system or pushing students into generic molds. We work with a very small group of students so we can actually understand who you are, what you care about, and where you want to go. From there, we help you build an application that is grounded in something real, whether that means refining your narrative, strengthening your activities, or even helping you create projects that genuinely align with your interests.
+    That's what Verge is built around. Not reinventing the process, but being more intentional about the stage that tends to get rushed. We work with a very small group of students so we can actually slow down and understand who you are, what you care about, and what your work says about you. From there, we help you shape a narrative that feels true, whether that means finding the thread that connects your activities, figuring out what your essays should actually be about, or just pushing you to reflect more honestly than you have before.
   </p>
   <p>
-    The goal isn’t to make you look impressive on paper. It’s to make your application make sense. Because when it does, it stands out naturally.
+    The goal isn't to make you look impressive on paper. It's to make your application feel like you. Because when it does, it stands out naturally.
   </p>
 </div>
           </ScrollReveal>
