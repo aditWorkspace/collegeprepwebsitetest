@@ -29,7 +29,7 @@ export default function BookPage() {
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <ScrollReveal>
             <div className="bg-card border border-border rounded-3xl overflow-hidden ambient-shadow-lg">
-              <iframe src={CALENDLY_URL} width="100%" height="600" frameBorder="0" title="Book a call" className="block" />
+              <iframe src={CALENDLY_URL} width="100%" height="600" frameBorder="0" title="Book a call" className="block" scrolling="no"/>
             </div>
           </ScrollReveal>
         </div>
