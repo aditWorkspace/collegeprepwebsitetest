@@ -18,7 +18,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Verge Consulting | College Profile Building",
+  title: "Prospectus Consulting | College Profile Building",
   description:
     "Personalized college counseling focused on building real profiles and strong applications. We work directly with a small number of students each cycle.",
 };
