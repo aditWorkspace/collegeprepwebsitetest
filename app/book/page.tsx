@@ -4,7 +4,7 @@ import InteractiveImage from "@/components/InteractiveImage";
 import { CALENDLY_URL } from "@/data/content";
 
 export const metadata: Metadata = {
-  title: "Book a Call | Verge Consulting",
+  title: "Book a Call | Prospectus Consulting",
   description: "Schedule a free intro call to discuss your college application goals.",
 };
 
