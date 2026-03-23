@@ -56,7 +56,7 @@ export default function BookPage() {
             {[
               { icon: "schedule", title: "30 minutes", desc: "Enough time to walk through our services and learn about your situation." },
               { icon: "psychology", title: "Useful perspective", desc: "You'll leave with a clear sense of what we do and whether it makes sense for you." },
-              { icon: "handshake", title: "No commitment", desc: "We only take students we believe we can genuinely help, and we'll be upfront about that." },
+              { icon: "handshake", title: "No commitment", desc: "Get a feel for the process first. You decide if it's right for you." },
             ].map((item, i) => (
               <ScrollReveal key={item.title} delay={i * 0.08}>
                 <InteractiveImage className="bg-card border border-border rounded-2xl p-7 text-center cursor-pointer" intensity={4} scale={1.02}>
