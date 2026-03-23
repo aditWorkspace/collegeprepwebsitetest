@@ -5,8 +5,8 @@ import InteractiveImage from "@/components/InteractiveImage";
 import { footerNav } from "@/data/content";
 
 export const metadata: Metadata = {
-  title: "Contact | Verge Consulting",
-  description: "Get in touch with Verge Consulting.",
+  title: "Contact | Prospectus Consulting",
+  description: "Get in touch with Prospectus Consulting.",
 };
 
 export default function ContactPage() {
