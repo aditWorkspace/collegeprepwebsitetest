@@ -5,7 +5,7 @@ import InteractiveImage from "@/components/InteractiveImage";
 import { testimonials } from "@/data/content";
 
 export const metadata: Metadata = {
-  title: "Testimonials | Verge Consulting",
+  title: "Testimonials | Prospectus Consulting",
   description: "What our students and their families have to say.",
 };
 
