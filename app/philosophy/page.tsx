@@ -4,7 +4,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import InteractiveImage from "@/components/InteractiveImage";
 
 export const metadata: Metadata = {
-  title: "Philosophy | Verge Consulting",
+  title: "Philosophy | Prospectus Consulting",
   description: "What we believe about college admissions, profile building, and helping students tell their real stories.",
 };
 
