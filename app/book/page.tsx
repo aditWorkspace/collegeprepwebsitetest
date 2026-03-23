@@ -28,9 +28,9 @@ export default function BookPage() {
       <section className="pb-10">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <ScrollReveal>
-            <div className="bg-card border border-border rounded-3xl overflow-hidden ambient-shadow-lg">
-              <iframe src={CALENDLY_URL} width="100%" height="600" frameBorder="0" title="Book a call" className="block" scrolling="no"/>
-            </div>
+              <div className="bg-card border border-border rounded-3xl overflow-hidden ambient-shadow-lg">
+                <iframe src={CALENDLY_URL} width="100%" height="700" frameBorder="0" title="Book a call" className="block" scrolling="no" style={{ overflow: 'hidden' }} />
+              </div>
           </ScrollReveal>
         </div>
       </section>
