@@ -35,7 +35,7 @@ export default function Navigation() {
           href="/"
           className="text-[20px] font-serif text-accent tracking-tight select-none hover:opacity-70 transition-opacity font-semibold"
         >
-          Verge
+          Prospectus
         </Link>
 
         {/* Desktop links */}
