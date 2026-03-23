@@ -40,7 +40,7 @@ export default function BookPage() {
           <ScrollReveal>
             <p className="text-[14px] text-muted mb-3">Having trouble?</p>
             <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-[14px] font-semibold text-accent hover:underline">
-              Open Calendly in a new tab
+              Open Cal.com in a new tab
               <span className="material-symbols-outlined text-[16px]">open_in_new</span>
             </a>
           </ScrollReveal>
