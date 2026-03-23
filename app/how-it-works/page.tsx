@@ -4,7 +4,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import InteractiveImage from "@/components/InteractiveImage";
 
 export const metadata: Metadata = {
-  title: "How It Works | Verge Consulting",
+  title: "How It Works | Prospectus Consulting",
   description: "Our three-step process: Understand, Build, Refine.",
 };
 
