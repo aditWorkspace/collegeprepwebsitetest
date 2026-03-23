@@ -19,12 +19,12 @@ export default function Home() {
             </p>
 
             <h1 className="font-serif text-[clamp(2.8rem,6vw,4.5rem)] leading-[1.05] tracking-tight text-foreground text-balance mt-1">
-              We help students build profiles.
+              We help students find their story.
               <br />
             </h1>
 
             <p className="text-[17px] lg:text-[18px] text-muted leading-[1.7] max-w-md">
-Most counseling services edit essays and build school lists, we help students build real projects, strengthen their profile, and create a clear, cohesive narrative across their entire application.            </p>
+Before we touch your essays, we find your thesis. Every activity, project, and personal statement then becomes evidence for the same argument: here is who I am, and here is why it matters.            </p>
             <p className="text-[15px] text-muted leading-[1.7] max-w-md">
               Both founders work directly with every student, and we keep our roster to fewer than ten students each cycle so we can give each one the attention they need.
             </p>
