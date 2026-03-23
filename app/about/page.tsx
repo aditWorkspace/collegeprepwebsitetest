@@ -6,8 +6,8 @@ import InteractiveImage from "@/components/InteractiveImage";
 import { counselors } from "@/data/content";
 
 export const metadata: Metadata = {
-  title: "About | Verge Consulting",
-  description: "Meet the founders behind Verge Consulting.",
+  title: "About | Prospectus Consulting",
+  description: "Meet the founders behind Prospectus Consulting.",
 };
 
 export default function AboutPage() {
@@ -21,7 +21,7 @@ export default function AboutPage() {
               /about
             </p>
             <h1 className="font-serif text-[clamp(2.5rem,5vw,4rem)] text-foreground leading-[1.08] tracking-tight mb-6">
-              The people behind <span className="text-accent font-semibold">Verge.</span>
+              The people behind <span className="text-accent font-semibold">Prospectus.</span>
             </h1>
             <p className="text-[17px] text-muted leading-[1.7] max-w-lg">
               We&apos;re not a large agency with rotating staff. We&apos;re two people who went through this process ourselves, learned what actually works, and built Verge around that experience. Every student works directly with both of us throughout the entire process.
