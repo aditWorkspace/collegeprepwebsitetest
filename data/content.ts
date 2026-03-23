@@ -9,11 +9,11 @@ export const CALENDLY_URL = "https://calendly.com/YOUR_LINK_HERE";
 // NAVIGATION
 // ============================================================
 export const navLinks = [
-  { label: "Why Us", href: "/why-us" },
+  { label: "Philosophy", href: "/philosophy" },
   { label: "About", href: "/about" },
+  { label: "Why Us", href: "/why-us" },
   { label: "How It Works", href: "/how-it-works" },
   { label: "Services", href: "/services" },
-  { label: "Philosophy", href: "/philosophy" },
 ];
 
 // ============================================================
