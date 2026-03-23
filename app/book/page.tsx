@@ -55,8 +55,8 @@ export default function BookPage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
             {[
               { icon: "schedule", title: "30 minutes", desc: "Enough time to walk through our services and learn about your situation." },
-              { icon: "psychology", title: "Useful perspective", desc: "You'll leave with a clear sense of what we do and whether it makes sense for you." },
-              { icon: "handshake", title: "No commitment", desc: "Get a feel for the process first. You decide if it's right for you." },
+              { icon: "person_search", title: "Uncover your story", desc: "We dig into your background and experiences to craft the narrative only you can tell." },
+              { icon: "route", title: "You decide", desc: "No commitment. Just a clear sense of whether this is right for you." },
             ].map((item, i) => (
               <ScrollReveal key={item.title} delay={i * 0.08}>
                 <InteractiveImage className="bg-card border border-border rounded-2xl p-7 text-center cursor-pointer" intensity={4} scale={1.02}>
