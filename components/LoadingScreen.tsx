@@ -64,7 +64,7 @@ export default function LoadingScreen({
                 className="text-2xl font-serif tracking-tight mb-10 font-semibold"
                 style={{ color: "#1E2B45" }}
               >
-                Verge
+                Prospectus
               </h1>
 
               <div
