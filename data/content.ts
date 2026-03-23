@@ -164,8 +164,8 @@ export const faqs = [
     answer: "It depends on where you are in the process. For students we work with earlier, we spend time building out the substance of your application before you ever write a word — developing projects, shaping your narrative, and figuring out what story your activities are actually telling. For students closer to senior year, the focus shifts to translating everything you've built into an application that feels cohesive and genuinely reflects who you are.",
   },
   {
-    question: "My student already has a counselor at school — can Verge still help?",
-    answer: "Yes, and honestly this is a pretty common situation. School counselors do important work, but they're often managing hundreds of students at a time, which makes the kind of deep, individualized focus we offer difficult for them to provide. Verge works alongside whatever support your student already has. We're not here to replace anyone — we just fill the gap that tends to matter most, making sure the story your student has spent years building actually comes through in their application.",
+    question: "My student already has a counselor at school — can Prospectus still help?",
+    answer: "Yes, and honestly this is a pretty common situation. School counselors do important work, but they're often managing hundreds of students at a time, which makes the kind of deep, individualized focus we offer difficult for them to provide. Prospectus works alongside whatever support your student already has. We're not here to replace anyone — we just fill the gap that tends to matter most, making sure the story your student has spent years building actually comes through in their application.",
   },
 ];
 
@@ -189,7 +189,7 @@ export const footerNav = {
     { label: "Contact", href: "/contact" },
   ],
   contact: {
-    email: "hello@vergeconsulting.com",   // REPLACE
+    email: "hello@Prospectusconsulting.com",   // REPLACE
     location: "Remote",
     instagram: "#",                        // REPLACE
     linkedin: "#",                         // REPLACE
