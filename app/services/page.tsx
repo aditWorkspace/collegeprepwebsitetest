@@ -5,7 +5,7 @@ import InteractiveImage from "@/components/InteractiveImage";
 import { services } from "@/data/content";
 
 export const metadata: Metadata = {
-  title: "Services | Verge Consulting",
+  title: "Services | Prospectus Consulting",
   description: "Hourly packages with full access to both founders. Profile building, project development, and essay support.",
 };
 
